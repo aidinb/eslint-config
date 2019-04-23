@@ -1,0 +1,24 @@
+{
+    "name": "eslint-config-woshapp-linter",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@bitbucket.org/MIDP1/eslint-config-woshapp-linter.git#master-nodejs"
+    },
+    "author": "Woshapp",
+    "license": "ISC",
+    "homepage": "https://bitbucket.org/MIDP1/eslint-config-woshapp-linters#readme",
+    "peerDependencies": {
+        "babel-eslint": "^10.0.1",
+        "eslint": "^5.16.0"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.0.1",
+        "eslint": "^5.16.0"
+    }
+}
