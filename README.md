@@ -16,7 +16,7 @@ Add an ESLint config to your `.eslintrc.js`:
 }
 ```
 
-The base rules uses the following dependencies:
+The base rules use the following dependencies:
 ```json
 {
     "peerDependencies": {
@@ -35,7 +35,7 @@ This package also exposes [`woshapp-linter/react`](react.js) if you want React r
 }
 ```
 
-The React rules extends the base rules and requires the following dependencies:
+The React rules extend the base rules and require the following dependencies:
 
 ```json
 {
