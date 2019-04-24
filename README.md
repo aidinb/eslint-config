@@ -18,6 +18,7 @@ Add an ESLint config to your `.eslintrc.js`:
 
 The base rules uses the following dependencies:
 ```json
+{
 	"peerDependencies": {
         "babel-eslint": "^10.0.1",
         "eslint": "^5.16.0"
@@ -37,6 +38,7 @@ This package also exposes [`woshapp-linter/react`](react.js) if you want React r
 The React rules extends the base rules and requires the following dependencies:
 
 ```json
+{
 	"peerDependencies": {
         "eslint-plugin-react": "^7.12.4"
     },
