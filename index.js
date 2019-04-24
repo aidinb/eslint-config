@@ -11,64 +11,43 @@ module.exports = {
             legacyDecorators: true,
             experimentalDecorators: true,
         },
-        experimentalDecorators: true,
     },
-    parser: "babel-eslint",
-    extends: "eslint:recommended",
+    parser: 'babel-eslint',
+    extends: 'eslint:recommended',
     rules: {
-        'newline-per-chained-call': [
-            'error',
-            {
-                'ignoreChainWithDepth': 2
-            }
-        ],
-        // 'space-in-parens': [],
-        "space-before-function-paren": [
-            "error", {
-                "anonymous": "never",
-                named: "never",
-                "asyncArrow": "always"
-            }
-        ],
-        'func-call-spacing': [
-            "error", 
-            "never"
-        ],
-        'comma-spacing': [
-            'error', 
-            { 
-                before: false, 
-                after: true 
-            }
-        ],
-        'quote-props': [
-            1, 
-            'consistent-as-needed', 
-            { 
-                'numbers': true 
-            }
-        ],
-        'array-element-newline': [
-            'error', 
-            { 
-                'multiline': true,
-                'minItems': 4,
-            }
-        ],
         'array-bracket-newline': [
-            'error', 
+            'error',
             {
                 multiline: true,
                 minItems: 4,
             }
         ],
-        'keyword-spacing': [
-            "error", { 
-                "before": true, 
+        'array-bracket-spacing': 'off',
+        'array-element-newline': [
+            'error',
+            {
+                multiline: true,
+                minItems: 4,
+            }
+        ],
+        'comma-dangle': 'off',
+        'comma-spacing': [
+            'error',
+            {
+                before: false,
                 after: true,
-                // "overrides": {
-                //     "describe": { "after": false },
-                // }
+            }
+        ],
+        'func-call-spacing': [
+            'error',
+            'never'
+        ],
+        'indent': [
+            'warn',
+            4,
+            {
+                MemberExpression: 'off',
+                SwitchCase: 1,
             }
         ],
         /**
@@ -85,67 +64,30 @@ module.exports = {
         // 'key-spacing': [
         //     'error', 
         //     { 
-        //         // "mode": 'minimum',
-        //         "multiLine": {
-        //             "beforeColon": false,
-        //             "afterColon": true,
-        //             'mode': 'minimum',
+        //         // mode: 'minimum',
+        //         multiLine: {
+        //             beforeColon: false,
+        //             afterColon: true,
+        //             mode: 'minimum',
         //         },
-        //         "align": {
-        //             "beforeColon": true,
-        //             "afterColon": true,
-        //             "on": "colon"
+        //         align: {
+        //             beforeColon: true,
+        //             afterColon: true,
+        //             on: 'colon',
         //         }
         //     }
         // ],
-        'no-multi-spaces': [
+        'keyword-spacing': [
             'error',
             {
-                exceptions: {
-                    'Property': true,
-                    'VariableDeclarator': true,
-                    'ImportDeclaration': true,  
-                },
-                'ignoreEOLComments': true,
+                before: true,
+                after: true,
+                // overrides: {
+                //     describe: { after: false },
+                // },
             }
         ],
-        'object-curly-spacing': [
-            'error', 
-            'always'
-        ],
-        'object-property-newline': [
-            'error', 
-            { 
-                'allowMultiplePropertiesPerLine': false, 
-            }
-        ],
-        'array-bracket-spacing': [ 'off', 'always'],
-        'object-curly-newline': [
-            'error', 
-            {
-                multiline: true,
-                minProperties: 2,
-                consistent: true,
-            }
-        ],
-        'object-property-newline': [
-            'warn',
-            { 
-                'allowAllPropertiesOnSameLine': true 
-            }
-        ],
-        'comma-dangle': ['off', 'always'],
-        'no-var': 'error',
-        'no-unused-vars': 'off',
-        'no-console': 'error',
-        'indent': [
-            'warn',
-            4,
-            {
-                MemberExpression: 'off',
-                SwitchCase: 1
-            }
-        ],
+        'linebreak-style': 'off',
         'max-len': [
             'warn',
             {
@@ -157,21 +99,71 @@ module.exports = {
                 ignoreComments: true,
             }
         ],
-        'linebreak-style': [
-            'off',
-            'unix'
+        'newline-per-chained-call': [
+            'error',
+            {
+                ignoreChainWithDepth: 2,
+            }
+        ],
+        'no-console': 'error',
+        'no-multi-spaces': [
+            'error',
+            {
+                exceptions: {
+                    Property: true,
+                    VariableDeclarator: true,
+                    ImportDeclaration: true,
+                },
+                ignoreEOLComments: true,
+            }
+        ],
+        'no-unused-vars': 'off',
+        'no-var': 'error',
+        'object-curly-newline': [
+            'error',
+            {
+                multiline: true,
+                minProperties: 2,
+                consistent: true,
+            }
+        ],
+        'object-curly-spacing': [
+            'error',
+            'always'
+        ],
+        'object-property-newline': [
+            'error',
+            {
+                allowAllPropertiesOnSameLine: true,
+            }
+        ],
+        'quote-props': [
+            'warn',
+            'consistent-as-needed',
+            {
+                numbers: true,
+            }
         ],
         'quotes': [
             'warn',
             'single',
             {
                 allowTemplateLiterals: true,
-                avoidEscape: false
+                avoidEscape: false,
             }
         ],
+        'space-before-function-paren': [
+            'error',
+            {
+                anonymous: 'never',
+                named: 'never',
+                asyncArrow: 'always',
+            }
+        ],
+        // 'space-in-parens': [],
         'semi': [
             'error',
             'never'
-        ]
+        ],
     }
 }
