@@ -24,7 +24,7 @@ module.exports = {
             jsx: true,
         },
     },
-	rules: {
+    rules: {
         'no-console': 'off',
         // Although it's nice to have, we don't want to force prop-type
         // declaration as we haven't done it at all so far
