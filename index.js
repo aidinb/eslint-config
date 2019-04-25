@@ -30,6 +30,10 @@ module.exports = {
                 minItems: 4,
             }
         ],
+        'brace-style': [
+            'error',
+            '1tbs'
+        ],
         'comma-dangle': 'off',
         'comma-spacing': [
             'error',
@@ -41,6 +45,10 @@ module.exports = {
         'func-call-spacing': [
             'error',
             'never'
+        ],
+        'function-paren-newline': [
+            'error', 
+            'multiline'
         ],
         'indent': [
             'warn',
@@ -105,6 +113,7 @@ module.exports = {
                 ignoreChainWithDepth: 2,
             }
         ],
+        'no-confusing-arrow': 'error',
         'no-console': 'error',
         'no-multi-spaces': [
             'error',
@@ -117,6 +126,7 @@ module.exports = {
                 ignoreEOLComments: true,
             }
         ],
+        'no-unneeded-ternary': 'error',
         'no-unused-vars': 'off',
         'no-var': 'error',
         'object-curly-newline': [
@@ -152,6 +162,10 @@ module.exports = {
                 avoidEscape: false,
             }
         ],
+        'space-before-blocks': [
+            'error', 
+            'always'
+        ],
         'space-before-function-paren': [
             'error',
             {
@@ -161,6 +175,7 @@ module.exports = {
             }
         ],
         // 'space-in-parens': [],
+        'space-infix-ops': 'error',
         'semi': [
             'error',
             'never'
