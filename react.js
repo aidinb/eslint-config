@@ -25,10 +25,6 @@ module.exports = {
         },
     },
     rules: {
-        'function-paren-newline': [
-            'error', 
-            'consistent'
-        ],
         'no-console': 'off',
         // Although it's nice to have, we don't want to force prop-type
         // declaration as we haven't done it at all so far

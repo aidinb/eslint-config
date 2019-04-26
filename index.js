@@ -48,7 +48,7 @@ module.exports = {
         ],
         'function-paren-newline': [
             'error', 
-            'multiline'
+            'consistent'
         ],
         'indent': [
             'warn',
