@@ -25,16 +25,20 @@ module.exports = {
         'array-bracket-spacing': 'off',
         'array-element-newline': [
             'error',
-            {
-                multiline: true,
-                minItems: 4,
-            }
+            'consistent',
+            // {
+            //     multiline: true,
+            //     minItems: 4,
+            // }
         ],
         'brace-style': [
             'error',
-            '1tbs'
+            '1tbs',
         ],
-        'comma-dangle': 'off',
+        'comma-dangle': [
+            "error", 
+            "always",
+        ],
         'comma-spacing': [
             'error',
             {
@@ -48,7 +52,7 @@ module.exports = {
         ],
         'function-paren-newline': [
             'error', 
-            'multiline'
+            'consistent' // instead of 'multiline'
         ],
         'indent': [
             'warn',
