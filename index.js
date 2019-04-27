@@ -117,7 +117,6 @@ module.exports = {
                 ignoreChainWithDepth: 2,
             }
         ],
-        'no-confusing-arrow': 'error',
         'no-console': 'error',
         'no-multi-spaces': [
             'error',
