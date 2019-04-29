@@ -1,7 +1,7 @@
 ## Install
 
 ```
-$ npm install --save-dev git+ssh://git@bitbucket.org/MIDP1/eslint-config-woshapp-linter.git
+$ npm install --save-dev https://bitbucket.org/MIDP1/eslint-config-woshapp-linter.git
 ```
 
 
