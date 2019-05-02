@@ -1,7 +1,7 @@
 ## Install
 
 ```
-$ npm install --save-dev https://bitbucket.org/MIDP1/eslint-config-woshapp-linter.git
+$ npm install --save-dev https://bitbucket.org/MIDP1/eslint-config-woshapp.git
 ```
 
 
@@ -27,11 +27,11 @@ The base rules use the following dependencies:
 ```
 
 ### React
-This package also exposes [`woshapp-linter/react`](react.js) if you want React rules:
+This package also exposes [`woshapp/react`](react.js) if you want React rules:
 
 ```javascript
 {
-    "extends": "woshapp-linter/react"
+    "extends": "woshapp/react"
 }
 ```
 
