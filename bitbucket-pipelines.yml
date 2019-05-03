@@ -6,13 +6,16 @@
 image: node:10.15.3
 
 pipelines:
-  default:
-    - step:
-        caches:
-          - node
-        script: # Modify the commands below to build your repository.
-          - echo woshapp
-          - pipe: atlassian/npm-publish:0.2.0
-            variables:
-              NPM_TOKEN: $NPM_TOKEN
+  branches:
+    master:
+      - step:
+          name: Deploy to NPM
+          deployment: production
+          caches:
+            - node
+          script: # Modify the commands below to build your repository.
+            - echo woshapp
+            - pipe: atlassian/npm-publish:0.2.0
+              variables:
+                NPM_TOKEN: $NPM_TOKEN
           
