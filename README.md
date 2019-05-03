@@ -1,7 +1,7 @@
 ## Install
 
 ```
-$ npm install --save-dev https://bitbucket.org/MIDP1/eslint-config-woshapp.git
+$ npm install --save-dev eslint-config-woshapp
 ```
 
 
@@ -12,7 +12,7 @@ Add an ESLint config to your `.eslintrc.js`:
 
 ```javascript
 {
-    "extends": "woshapp-linter"
+    "extends": "woshapp"
 }
 ```
 
