@@ -129,6 +129,7 @@ module.exports = {
                 ignoreEOLComments: true,
             }
         ],
+        'no-trailing-spaces': 'error',
         'no-unneeded-ternary': 'error',
         'no-unused-vars': 'off',
         'no-var': 'error',
