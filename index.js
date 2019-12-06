@@ -36,8 +36,8 @@ module.exports = {
             '1tbs',
         ],
         'comma-dangle': [
-            "error", 
-            "always",
+            'error', 
+            'always',
         ],
         'comma-spacing': [
             'error',
