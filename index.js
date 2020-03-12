@@ -166,6 +166,7 @@ module.exports = {
                 avoidEscape: false,
             }
         ],
+        'require-await': 'error',
         'space-before-blocks': [
             'error', 
             'always'
