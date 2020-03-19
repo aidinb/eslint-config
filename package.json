@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-woshapp",
-    "version": "2.0.7",
+    "version": "2.0.8",
     "description": "Woshapp Linters for Node, React and JS in general",
     "main": "index.js",
     "scripts": {
