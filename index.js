@@ -167,6 +167,15 @@ module.exports = {
             }
         ],
         'require-await': 'error',
+        'sort-imports': [
+            'error',
+            {
+                ignoreCase: false,
+                ignoreDeclarationSort: true,
+                ignoreMemberSort: false,
+                memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
+            }
+        ],
         'space-before-blocks': [
             'error', 
             'always'
