@@ -14,9 +14,9 @@ module.exports = {
             version: 'detect'
         }
     },
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser',
     parserOptions: {
-        ecmaVersion: 2018,
+        ecmaVersion: 2021,
         sourceType: 'module',
         ecmaFeatures: {
             legacyDecorators: true,
@@ -25,9 +25,11 @@ module.exports = {
         },
     },
     rules: {
+        'import/no-commonjs': 'error',
         'no-console': 'off',
-        // Although it's nice to have, we don't want to force prop-type
-        // declaration as we haven't done it at all so far
+        'react/jsx-key': 'off',
+        'react/jsx-uses-react': 'off',
         'react/prop-types': 'off',
+        'react/react-in-jsx-scope': 'off',
     }
 }

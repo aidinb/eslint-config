@@ -5,40 +5,27 @@ module.exports = {
         mocha: true,
     },
     parserOptions: {
-        ecmaVersion: 2017,
+        ecmaVersion: 2021,
         sourceType: 'module',
         ecmaFeatures: {
             legacyDecorators: true,
             experimentalDecorators: true,
         },
     },
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser',
     extends: 'eslint:recommended',
     rules: {
-        'array-bracket-newline': [
-            'error',
-            {
-                multiline: true,
-                minItems: 4,
-            }
-        ],
+        'array-bracket-newline': ['error', 'consistent'],
         'array-bracket-spacing': 'off',
         'array-element-newline': [
             'error',
             'consistent',
-            // {
-            //     multiline: true,
-            //     minItems: 4,
-            // }
         ],
         'brace-style': [
             'error',
             '1tbs',
         ],
-        'comma-dangle': [
-            'error', 
-            'always',
-        ],
+        'comma-dangle': 'off',
         'comma-spacing': [
             'error',
             {
@@ -52,7 +39,7 @@ module.exports = {
         ],
         'function-paren-newline': [
             'error', 
-            'consistent' // instead of 'multiline'
+            'consistent'
         ],
         'indent': [
             'warn',
@@ -62,10 +49,6 @@ module.exports = {
                 SwitchCase: 1,
             }
         ],
-        /**
-         * Temporarily disable because there are
-         * no rules that cover our needs
-         */
         'key-spacing': [
             'error',
             {
@@ -73,30 +56,11 @@ module.exports = {
                 mode: 'minimum',
             }
         ],
-        // 'key-spacing': [
-        //     'error', 
-        //     { 
-        //         // mode: 'minimum',
-        //         multiLine: {
-        //             beforeColon: false,
-        //             afterColon: true,
-        //             mode: 'minimum',
-        //         },
-        //         align: {
-        //             beforeColon: true,
-        //             afterColon: true,
-        //             on: 'colon',
-        //         }
-        //     }
-        // ],
         'keyword-spacing': [
             'error',
             {
                 before: true,
                 after: true,
-                // overrides: {
-                //     describe: { after: false },
-                // },
             }
         ],
         'linebreak-style': 'off',
@@ -111,12 +75,7 @@ module.exports = {
                 ignoreComments: true,
             }
         ],
-        'newline-per-chained-call': [
-            'error',
-            {
-                ignoreChainWithDepth: 2,
-            }
-        ],
+        'newline-per-chained-call': ['error', { ignoreChainWithDepth: 3 }],
         'no-console': 'error',
         'no-multi-spaces': [
             'error',
@@ -133,14 +92,7 @@ module.exports = {
         'no-unneeded-ternary': 'error',
         'no-unused-vars': 'off',
         'no-var': 'error',
-        'object-curly-newline': [
-            'error',
-            {
-                multiline: true,
-                minProperties: 2,
-                consistent: true,
-            }
-        ],
+        'object-curly-newline': ['error', { consistent: true }],
         'object-curly-spacing': [
             'error',
             'always'
@@ -176,6 +128,7 @@ module.exports = {
                 memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
             }
         ],
+        'sort-keys': 'error',
         'space-before-blocks': [
             'error', 
             'always'
@@ -188,7 +141,6 @@ module.exports = {
                 asyncArrow: 'always',
             }
         ],
-        // 'space-in-parens': [],
         'space-infix-ops': 'error',
         'semi': [
             'error',
