@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-woshapp",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "description": "Woshapp Linters for Node, React and JS in general",
     "main": "index.js",
     "scripts": {
@@ -17,6 +17,7 @@
         "@babel/core": "^7.15.5",
         "@babel/eslint-parser": "^7.15.4",
         "eslint": "^7.32.0",
+        "eslint-plugin-import": "^2.24.2",
         "eslint-plugin-react": "^7.25.1"
     }
 }

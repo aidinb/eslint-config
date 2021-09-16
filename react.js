@@ -4,6 +4,7 @@ module.exports = {
     },
     extends: [
         'plugin:react/recommended',
+        'plugin:import/recommended',
         './index.js',
     ],
     plugins: [

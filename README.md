@@ -1,7 +1,7 @@
 ## Install
 
 ```
-npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint eslint-plugin-react
+npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint eslint-plugin-react eslint-plugin-import
 ```
 
 
