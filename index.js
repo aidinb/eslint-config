@@ -128,7 +128,6 @@ module.exports = {
                 memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
             }
         ],
-        'sort-keys': 'error',
         'space-before-blocks': [
             'error', 
             'always'
