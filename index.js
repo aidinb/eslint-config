@@ -77,6 +77,7 @@ module.exports = {
         ],
         'newline-per-chained-call': ['error', { ignoreChainWithDepth: 3 }],
         'no-console': 'error',
+        'no-multiple-empty-lines': ['error', { max: 1 }],
         'no-multi-spaces': [
             'error',
             {
