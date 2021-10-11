@@ -104,6 +104,7 @@ module.exports = {
                 allowAllPropertiesOnSameLine: true,
             }
         ],
+        'prefer-const': 'error',
         'quote-props': [
             'warn',
             'consistent-as-needed',
