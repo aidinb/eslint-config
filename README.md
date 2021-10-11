@@ -1,9 +1,14 @@
 ## Install
 
+Node project:
+```
+npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint
+```
+
+React project:
 ```
 npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint eslint-plugin-react eslint-plugin-import
 ```
-
 
 ## Usage
 
