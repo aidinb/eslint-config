@@ -25,7 +25,7 @@ module.exports = {
             'error',
             '1tbs',
         ],
-        'comma-dangle': 'off',
+        'comma-dangle': ['error', 'only-multiline'],
         'comma-spacing': [
             'error',
             {
@@ -33,6 +33,7 @@ module.exports = {
                 after: true,
             }
         ],
+        'comma-style': ['error', 'last'],
         'func-call-spacing': [
             'error',
             'never'
