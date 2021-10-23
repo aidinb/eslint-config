@@ -72,6 +72,7 @@ module.exports = {
             }
         ],
         'linebreak-style': 'off',
+        'lines-between-class-members': ['error', 'always'],
         'max-len': [
             'warn',
             {
