@@ -21,6 +21,13 @@ module.exports = {
             'error',
             'consistent',
         ],
+        'arrow-spacing': [
+            'error',
+            {
+                before: true,
+                after: true,
+            }
+        ],
         'brace-style': [
             'error',
             '1tbs',
