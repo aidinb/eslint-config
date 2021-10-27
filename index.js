@@ -113,6 +113,7 @@ module.exports = {
                 allowAllPropertiesOnSameLine: true,
             }
         ],
+        'padded-blocks': ['error', 'never'],
         'prefer-const': 'error',
         'quote-props': [
             'warn',
