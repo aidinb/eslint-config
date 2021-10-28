@@ -60,8 +60,9 @@ module.exports = {
         'key-spacing': [
             'error',
             {
+                beforeColon: false,
                 afterColon: true,
-                mode: 'minimum',
+                mode: 'strict',
             }
         ],
         'keyword-spacing': [
