@@ -91,12 +91,12 @@ module.exports = {
         'no-multi-spaces': [
             'error',
             {
+                ignoreEOLComments: false,
                 exceptions: {
-                    Property: true,
-                    VariableDeclarator: true,
-                    ImportDeclaration: true,
+                    Property: false,
+                    VariableDeclarator: false,
+                    ImportDeclaration: false,
                 },
-                ignoreEOLComments: true,
             }
         ],
         'no-trailing-spaces': 'error',
