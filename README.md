@@ -7,7 +7,7 @@ npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser es
 
 React project:
 ```
-npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint eslint-plugin-react eslint-plugin-import
+npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint eslint-plugin-react eslint-plugin-import eslint-plugin-decorator-position
 ```
 
 ## Usage

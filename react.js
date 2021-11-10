@@ -9,6 +9,7 @@ module.exports = {
     ],
     plugins: [
         'react',
+        'decorator-position',
     ],
     settings: {
         react: {
@@ -26,6 +27,13 @@ module.exports = {
         },
     },
     rules: {
+        'decorator-position/decorator-position': [
+            'error',
+            {
+                properties: 'above',
+                methods: 'above',
+            }
+        ],
         'import/no-commonjs': 'error',
         'no-console': 'off',
         'react/jsx-key': 'off',
