@@ -104,10 +104,7 @@ module.exports = {
         'no-unused-vars': 'off',
         'no-var': 'error',
         'object-curly-newline': ['error', { consistent: true }],
-        'object-curly-spacing': [
-            'error',
-            'always'
-        ],
+        'object-curly-spacing': ['error', 'always'],
         'object-property-newline': [
             'error',
             {
@@ -132,6 +129,7 @@ module.exports = {
             }
         ],
         'require-await': 'error',
+        'semi': ['error', 'never'],
         'sort-imports': [
             'error',
             {
@@ -154,9 +152,6 @@ module.exports = {
             }
         ],
         'space-infix-ops': 'error',
-        'semi': [
-            'error',
-            'never'
-        ],
+        'switch-colon-spacing': 'error',
     }
 }
