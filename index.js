@@ -26,7 +26,7 @@ module.exports = {
         'camelcase': ['error', {
             ignoreDestructuring: true,
             ignoreImports: true,
-            allow: ['/A-Z/'],
+            allow: ['/A-Z/', '^vehicle_lpn$'],
         }],
         'comma-dangle': ['error', 'only-multiline'],
         'comma-spacing': ['error', {
