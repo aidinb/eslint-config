@@ -13,7 +13,10 @@ module.exports = {
         },
     },
     parser: '@babel/eslint-parser',
-    extends: 'eslint:recommended',
+    extends: [
+        'eslint:recommended',
+        'plugin:promise/recommended',
+    ],
     rules: {
         'array-bracket-newline': ['error', 'consistent'],
         'array-bracket-spacing': 'off',

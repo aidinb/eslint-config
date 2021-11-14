@@ -2,12 +2,12 @@
 
 Node project:
 ```
-npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint
+npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint eslint-plugin-promise
 ```
 
 React project:
 ```
-npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint eslint-plugin-react eslint-plugin-import eslint-plugin-decorator-position
+npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint eslint-plugin-react eslint-plugin-import eslint-plugin-decorator-position eslint-plugin-promise
 ```
 
 ## Usage
