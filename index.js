@@ -52,7 +52,7 @@ module.exports = {
             before: true,
             after: true,
         }],
-        'linebreak-style': 'off',
+        'linebreak-style': 'error',
         'lines-between-class-members': ['error', 'always'],
         'max-len': ['warn', {
             code: 140,
