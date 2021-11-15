@@ -19,7 +19,7 @@ module.exports = {
     ],
     rules: {
         'array-bracket-newline': ['error', 'consistent'],
-        'array-bracket-spacing': 'off',
+        'array-bracket-spacing': 'error',
         'array-element-newline': ['error', 'consistent'],
         'arrow-spacing': ['error', {
             before: true,
