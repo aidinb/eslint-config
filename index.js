@@ -40,7 +40,6 @@ module.exports = {
             after: true,
         }],
         'comma-style': ['error', 'last'],
-        'consistent-return': 'error',
         'func-call-spacing': ['error', 'never'],
         'function-paren-newline': ['error', 'consistent'],
         'indent': ['warn', 4, {
