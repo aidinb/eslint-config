@@ -20,6 +20,9 @@ module.exports = {
     rules: {
         'array-bracket-newline': ['error', 'consistent'],
         'array-bracket-spacing': 'error',
+        'array-callback-return': ['error', {
+            allowImplicit: true,
+        }],
         'array-element-newline': ['error', 'consistent'],
         'arrow-spacing': ['error', {
             before: true,
@@ -37,6 +40,7 @@ module.exports = {
             after: true,
         }],
         'comma-style': ['error', 'last'],
+        'consistent-return': 'error',
         'func-call-spacing': ['error', 'never'],
         'function-paren-newline': ['error', 'consistent'],
         'indent': ['warn', 4, {
