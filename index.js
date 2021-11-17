@@ -40,12 +40,22 @@ module.exports = {
             after: true,
         }],
         'comma-style': ['error', 'last'],
+        'curly': ['error', 'multi-line'],
+        'default-case': ['error', {
+            commentPattern: '^no default$',
+        }],
+        'dot-notation': 'error',
+        'eol-last': ['error', 'always'],
+        'eqeqeq': ['error', 'always', {
+            null: 'ignore',
+        }],
         'func-call-spacing': ['error', 'never'],
         'function-paren-newline': ['error', 'consistent'],
         'indent': ['warn', 4, {
             MemberExpression: 'off',
             SwitchCase: 1,
         }],
+        'jsx-quotes': ['error', 'prefer-double'],
         'key-spacing': ['error', {
             beforeColon: false,
             afterColon: true,
@@ -55,8 +65,10 @@ module.exports = {
             before: true,
             after: true,
         }],
-        'linebreak-style': 'error',
-        'lines-between-class-members': ['error', 'always'],
+        'linebreak-style': ['error', 'unix'],
+        'lines-between-class-members': ['error', 'always', {
+            exceptAfterSingleLine: true,
+        }],
         'max-len': ['warn', {
             code: 140,
             ignoreStrings: true,
@@ -69,6 +81,8 @@ module.exports = {
             ignoreChainWithDepth: 3,
         }],
         'no-console': 'error',
+        'no-else-return': 'error',
+        'no-implicit-coercion': 'error',
         'no-multiple-empty-lines': ['error', {
             max: 1,
         }],
@@ -80,9 +94,13 @@ module.exports = {
                 ImportDeclaration: false,
             },
         }],
+        'no-throw-literal': 'error',
         'no-trailing-spaces': 'error',
         'no-unneeded-ternary': 'error',
         'no-unused-vars': 'off',
+        'no-useless-concat': 'error',
+        'no-useless-escape': 'error',
+        'no-useless-return': 'error',
         'no-var': 'error',
         'object-curly-newline': ['error', {
             consistent: true,
@@ -116,5 +134,6 @@ module.exports = {
         }],
         'space-infix-ops': 'error',
         'switch-colon-spacing': 'error',
+        'yoda': 'error',
     }
 }
