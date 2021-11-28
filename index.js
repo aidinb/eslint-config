@@ -110,9 +110,12 @@ module.exports = {
         'object-property-newline': ['error', {
             allowAllPropertiesOnSameLine: true,
         }],
+        'object-shorthand': 'error',
         'one-var': 'error',
         'padded-blocks': ['error', 'never'],
         'prefer-const': 'error',
+        'prefer-promise-reject-errors': 'error',
+        'prefer-spread': 'error',
         'quote-props': ['error', 'consistent-as-needed', {
             numbers: true,
         }],
@@ -135,6 +138,7 @@ module.exports = {
             asyncArrow: 'always',
         }],
         'space-infix-ops': 'error',
+        'spaced-comment': ['error', 'always'],
         'switch-colon-spacing': 'error',
         'yoda': 'error',
         'unicorn/catch-error-name': ['error', {
