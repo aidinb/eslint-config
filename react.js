@@ -33,7 +33,6 @@ module.exports = {
         }],
         'import/no-commonjs': 'error',
         'no-console': 'off',
-        'react/jsx-key': 'off',
         'react/jsx-uses-react': 'off',
         'react/prop-types': 'off',
         'react/react-in-jsx-scope': 'off',

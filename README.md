@@ -2,12 +2,12 @@
 
 Node project:
 ```
-npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint eslint-plugin-promise
+npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint eslint-plugin-promise eslint-plugin-unicorn
 ```
 
 React project:
 ```
-npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint eslint-plugin-react eslint-plugin-import eslint-plugin-decorator-position eslint-plugin-promise
+npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint eslint-plugin-react eslint-plugin-import eslint-plugin-decorator-position eslint-plugin-promise eslint-plugin-unicorn
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ Add an ESLint config to your `.eslintrc.js`:
 ```
 
 ### React
-This package also exposes [`woshapp/react`](react.js) if you want React rules:
+This package also exposes [`woshapp/react`](react.js) for React rules:
 
 ```javascript
 {

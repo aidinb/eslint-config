@@ -16,6 +16,7 @@ module.exports = {
     extends: [
         'eslint:recommended',
         'plugin:promise/recommended',
+        'plugin:unicorn/recommended',
     ],
     rules: {
         'array-bracket-newline': ['error', 'consistent'],
@@ -51,7 +52,7 @@ module.exports = {
         }],
         'func-call-spacing': ['error', 'never'],
         'function-paren-newline': ['error', 'consistent'],
-        'indent': ['warn', 4, {
+        'indent': ['error', 4, {
             MemberExpression: 'off',
             SwitchCase: 1,
         }],
@@ -69,7 +70,7 @@ module.exports = {
         'lines-between-class-members': ['error', 'always', {
             exceptAfterSingleLine: true,
         }],
-        'max-len': ['warn', {
+        'max-len': ['error', {
             code: 140,
             ignoreStrings: true,
             ignoreRegExpLiterals: true,
@@ -109,12 +110,13 @@ module.exports = {
         'object-property-newline': ['error', {
             allowAllPropertiesOnSameLine: true,
         }],
+        'one-var': 'error',
         'padded-blocks': ['error', 'never'],
         'prefer-const': 'error',
-        'quote-props': ['warn', 'consistent-as-needed', {
+        'quote-props': ['error', 'consistent-as-needed', {
             numbers: true,
         }],
-        'quotes': ['warn', 'single', {
+        'quotes': ['error', 'single', {
             allowTemplateLiterals: true,
             avoidEscape: false,
         }],
@@ -124,7 +126,7 @@ module.exports = {
             ignoreCase: false,
             ignoreDeclarationSort: true,
             ignoreMemberSort: false,
-            memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
+            memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
         }],
         'space-before-blocks': ['error', 'always'],
         'space-before-function-paren': ['error', {
@@ -135,5 +137,25 @@ module.exports = {
         'space-infix-ops': 'error',
         'switch-colon-spacing': 'error',
         'yoda': 'error',
+        'unicorn/catch-error-name': ['error', {
+            name: 'err',
+        }],
+        'unicorn/consistent-function-scoping': 'off',
+        'unicorn/filename-case': 'off',
+        'unicorn/new-for-builtins': 'off',
+        'unicorn/no-array-callback-reference': 'off',
+        'unicorn/no-array-for-each': 'off',
+        'unicorn/no-array-reduce': 'off',
+        'unicorn/no-lonely-if': 'off',
+        'unicorn/no-null': 'off',
+        'unicorn/no-object-as-default-parameter': 'off',
+        'unicorn/no-this-assignment': 'off',
+        'unicorn/numeric-separators-style': 'off',
+        'unicorn/prefer-number-properties': 'off',
+        'unicorn/prefer-spread': 'off',
+        'unicorn/prefer-switch': 'off',
+        'unicorn/prefer-ternary': 'off',
+        'unicorn/throw-new-error': 'off',
+        'unicorn/prevent-abbreviations': 'off',
     }
 }
