@@ -155,6 +155,7 @@ module.exports = {
         'unicorn/no-object-as-default-parameter': 'off',
         'unicorn/no-this-assignment': 'off',
         'unicorn/numeric-separators-style': 'off',
+        'unicorn/prefer-module': 'off',
         'unicorn/prefer-number-properties': 'off',
         'unicorn/prefer-object-from-entries': 'off',
         'unicorn/prefer-spread': 'off',
