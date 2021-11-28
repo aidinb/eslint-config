@@ -111,7 +111,10 @@ module.exports = {
             allowAllPropertiesOnSameLine: true,
         }],
         'object-shorthand': 'error',
-        'one-var': ['error', 'never'],
+        'one-var': ['error', {
+            initialized: 'never',
+            uninitialized: 'always',
+        }],
         'padded-blocks': ['error', 'never'],
         'prefer-const': 'error',
         'prefer-promise-reject-errors': 'error',
