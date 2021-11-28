@@ -113,7 +113,7 @@ module.exports = {
         'object-shorthand': 'error',
         'one-var': ['error', {
             initialized: 'never',
-            uninitialized: 'always',
+            uninitialized: 'consecutive',
         }],
         'padded-blocks': ['error', 'never'],
         'prefer-const': 'error',
@@ -141,7 +141,12 @@ module.exports = {
             asyncArrow: 'always',
         }],
         'space-infix-ops': 'error',
-        'spaced-comment': ['error', 'always'],
+        'spaced-comment': ['error', 'always', {
+            exceptions: ['*'],
+            block: {
+                balanced: true,
+            },
+        }],
         'switch-colon-spacing': 'error',
         'yoda': 'error',
         'unicorn/catch-error-name': ['error', {
@@ -161,6 +166,7 @@ module.exports = {
         'unicorn/prefer-module': 'off',
         'unicorn/prefer-number-properties': 'off',
         'unicorn/prefer-object-from-entries': 'off',
+        'unicorn/prefer-set-has': 'off',
         'unicorn/prefer-spread': 'off',
         'unicorn/prefer-switch': 'off',
         'unicorn/prefer-ternary': 'off',
