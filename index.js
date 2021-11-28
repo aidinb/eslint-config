@@ -156,6 +156,7 @@ module.exports = {
         'unicorn/no-this-assignment': 'off',
         'unicorn/numeric-separators-style': 'off',
         'unicorn/prefer-number-properties': 'off',
+        'unicorn/prefer-object-from-entries': 'off',
         'unicorn/prefer-spread': 'off',
         'unicorn/prefer-switch': 'off',
         'unicorn/prefer-ternary': 'off',
