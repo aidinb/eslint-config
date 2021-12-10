@@ -1,29 +1,28 @@
-## Install
+## Node rules
 
-Node project:
+### Install
 ```
-npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint eslint-plugin-promise eslint-plugin-unicorn
-```
-
-React project:
-```
-npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint eslint-plugin-react eslint-plugin-import eslint-plugin-decorator-position eslint-plugin-promise eslint-plugin-unicorn
+npm install --save-dev eslint-config-woshapp eslint@7.32.0 eslint-plugin-node eslint-plugin-promise eslint-plugin-unicorn
 ```
 
-## Usage
-
-### Base
-Add an ESLint config to your `.eslintrc.js`:
+### Usage
+Add the following to `.eslintrc.js`:
 
 ```javascript
 {
-    "extends": "woshapp"
+    "extends": "woshapp/node"
 }
 ```
 
-### React
-This package also exposes [`woshapp/react`](react.js) for React rules:
+## React rules
 
+### Install
+```
+npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint@7.32.0 eslint-plugin-react eslint-plugin-import eslint-plugin-decorator-position eslint-plugin-promise eslint-plugin-unicorn
+```
+
+### Usage
+Add the following to `.eslintrc.js`:
 ```javascript
 {
     "extends": "woshapp/react"

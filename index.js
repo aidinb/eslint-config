@@ -1,18 +1,7 @@
 module.exports = {
     env: {
         es6: true,
-        node: true,
-        mocha: true,
     },
-    parserOptions: {
-        ecmaVersion: 2021,
-        sourceType: 'module',
-        ecmaFeatures: {
-            legacyDecorators: true,
-            experimentalDecorators: true,
-        },
-    },
-    parser: '@babel/eslint-parser',
     extends: [
         'eslint:recommended',
         'plugin:promise/recommended',
