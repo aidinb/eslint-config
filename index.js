@@ -84,6 +84,7 @@ module.exports = {
                 ImportDeclaration: false,
             },
         }],
+        'no-nested-ternary': 'error',
         'no-throw-literal': 'error',
         'no-trailing-spaces': 'error',
         'no-unneeded-ternary': 'error',
