@@ -5,6 +5,7 @@ module.exports = {
     },
     extends: [
         'plugin:react/recommended',
+        'plugin:react/jsx-runtime',
         'plugin:import/recommended',
         './index.js',
     ],
@@ -15,7 +16,18 @@ module.exports = {
     settings: {
         react: {
             version: 'detect'
-        }
+        },
+        componentWrapperFunctions: [
+            // Mobx observer
+            'observer',
+        ],
+        linkComponents: [
+            // Component used as alternatives to <a> for linking, e.g. <Link to={url} />
+            {
+                name: 'Link',
+                linkAttribute: 'to'
+            },
+        ],
     },
     parser: '@babel/eslint-parser',
     parserOptions: {
@@ -33,9 +45,34 @@ module.exports = {
             methods: 'above',
         }],
         'import/no-commonjs': 'error',
-        'no-console': 'off',
-        'react/jsx-uses-react': 'off',
+        'react/jsx-child-element-spacing': 'error',
+        'react/jsx-curly-brace-presence': ['error', 'never'],
+        'react/jsx-curly-newline': ['error', {
+            multiline: 'consistent',
+            singleline: 'consistent'
+        }],
+        'react/jsx-curly-spacing': ['error', {
+            when: 'never',
+            children: true,
+        }],
+        'react/jsx-equals-spacing': ['error', 'never'],
+        'react/jsx-indent': ['error', 4, {
+            checkAttributes: true,
+            indentLogicalExpressions: true,
+        }],
+        'react/jsx-indent-props': ['error', {
+            indentMode: 4,
+            ignoreTernaryOperator: true,
+        }],
+        'react/jsx-pascal-case': 'error',
+        'react/jsx-props-no-multi-spaces': 'error',
+        'react/jsx-tag-spacing': ['error', {
+            closingSlash: 'never',
+            beforeSelfClosing: 'always',
+            afterOpening: 'never',
+            beforeClosing: 'never',
+        }],
+        'react/display-name': 'off',
         'react/prop-types': 'off',
-        'react/react-in-jsx-scope': 'off',
     }
 }
