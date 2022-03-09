@@ -30,6 +30,7 @@ module.exports = {
             after: true,
         }],
         'comma-style': ['error', 'last'],
+        'computed-property-spacing': ['error', 'never'],
         'curly': ['error', 'multi-line'],
         'default-case': ['error', {
             commentPattern: '^no default$',
@@ -130,6 +131,7 @@ module.exports = {
             named: 'never',
             asyncArrow: 'always',
         }],
+        'space-in-parens': ['error', 'never'],
         'space-infix-ops': 'error',
         'spaced-comment': ['error', 'always', {
             exceptions: ['*'],

@@ -22,7 +22,7 @@ module.exports = {
             'observer',
         ],
         linkComponents: [
-            // Component used as alternatives to <a> for linking, e.g. <Link to={url} />
+            // Component used as alternative to <a> for linking, e.g. <Link to={url} />
             {
                 name: 'Link',
                 linkAttribute: 'to'
