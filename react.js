@@ -65,6 +65,7 @@ module.exports = {
             ignoreTernaryOperator: true,
         }],
         'react/jsx-max-props-per-line': ['error', {
+            maximum: 2,
             when: 'multiline',
         }],
         'react/jsx-pascal-case': 'error',
