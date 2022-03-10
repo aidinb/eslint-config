@@ -41,6 +41,7 @@ module.exports = {
             null: 'ignore',
         }],
         'func-call-spacing': ['error', 'never'],
+        'function-call-argument-newline': ['error', 'consistent'],
         'function-paren-newline': ['error', 'consistent'],
         'indent': ['error', 4, {
             MemberExpression: 'off',
@@ -94,6 +95,7 @@ module.exports = {
         'no-useless-escape': 'error',
         'no-useless-return': 'error',
         'no-var': 'error',
+        'no-whitespace-before-property': 'error',
         'object-curly-newline': ['error', {
             consistent: true,
         }],
@@ -118,6 +120,7 @@ module.exports = {
             avoidEscape: false,
         }],
         'require-await': 'error',
+        'rest-spread-spacing': ['error', 'never'],
         'semi': ['error', 'never'],
         'sort-imports': ['error', {
             ignoreCase: false,
@@ -133,6 +136,7 @@ module.exports = {
         }],
         'space-in-parens': ['error', 'never'],
         'space-infix-ops': 'error',
+        'space-unary-ops': 'error',
         'spaced-comment': ['error', 'always', {
             exceptions: ['*'],
             block: {

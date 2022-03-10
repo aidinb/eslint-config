@@ -64,6 +64,9 @@ module.exports = {
             indentMode: 4,
             ignoreTernaryOperator: true,
         }],
+        'react/jsx-max-props-per-line': ['error', {
+            when: 'multiline',
+        }],
         'react/jsx-pascal-case': 'error',
         'react/jsx-props-no-multi-spaces': 'error',
         'react/jsx-tag-spacing': ['error', {
