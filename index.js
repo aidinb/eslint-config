@@ -35,6 +35,7 @@ module.exports = {
         'default-case': ['error', {
             commentPattern: '^no default$',
         }],
+        'dot-location': ['error', 'property'],
         'dot-notation': 'error',
         'eol-last': ['error', 'always'],
         'eqeqeq': ['error', 'always', {
@@ -108,6 +109,7 @@ module.exports = {
             initialized: 'never',
             uninitialized: 'consecutive',
         }],
+        'operator-linebreak': ['error', 'before'],
         'padded-blocks': ['error', 'never'],
         'prefer-const': 'error',
         'prefer-promise-reject-errors': 'error',

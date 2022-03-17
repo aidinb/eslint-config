@@ -7,4 +7,7 @@ module.exports = {
         'plugin:node/recommended',
         './index.js',
     ],
+    rules: {
+        'node/handle-callback-err': ['error', 'err'],
+    }
 }
