@@ -2,7 +2,7 @@
 
 ### Install
 ```
-npm install --save-dev eslint-config-woshapp eslint@7.32.0 eslint-plugin-node eslint-plugin-promise eslint-plugin-unicorn@40.1.0
+npm install --save-dev eslint-config-woshapp eslint@7.32.0 eslint-plugin-n eslint-plugin-promise eslint-plugin-unicorn@40.1.0
 ```
 
 ### Usage
