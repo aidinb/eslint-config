@@ -160,6 +160,7 @@ module.exports = {
         'unicorn/no-null': 'off',
         'unicorn/no-object-as-default-parameter': 'off',
         'unicorn/no-this-assignment': 'off',
+        'unicorn/no-zero-fractions': 'off',
         'unicorn/numeric-separators-style': 'off',
         'unicorn/prefer-module': 'off',
         'unicorn/prefer-number-properties': 'off',
