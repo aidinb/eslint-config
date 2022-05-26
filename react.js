@@ -2,6 +2,7 @@ module.exports = {
     env: {
         browser: true,
         jest: true,
+        es2022: true,
     },
     extends: [
         'plugin:react/recommended',
@@ -11,7 +12,7 @@ module.exports = {
     ],
     plugins: [
         'react',
-        'decorator-position',
+        // 'decorator-position',
     ],
     settings: {
         react: {
@@ -29,9 +30,8 @@ module.exports = {
             },
         ],
     },
-    parser: '@babel/eslint-parser',
     parserOptions: {
-        ecmaVersion: 2021,
+        ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
             legacyDecorators: true,
@@ -40,10 +40,11 @@ module.exports = {
         },
     },
     rules: {
-        'decorator-position/decorator-position': ['error', {
-            properties: 'above',
-            methods: 'above',
-        }],
+        // TODO: implement when it supports Eslint 8
+        // 'decorator-position/decorator-position': ['error', {
+        //     properties: 'above',
+        //     methods: 'above',
+        // }],
         'import/no-commonjs': 'error',
         'react/jsx-child-element-spacing': 'error',
         'react/jsx-curly-brace-presence': ['error', 'never'],

@@ -6,7 +6,9 @@ module.exports = {
         'eslint:recommended',
         'plugin:promise/recommended',
         'plugin:unicorn/recommended',
+        'plugin:@typescript-eslint/recommended',
     ],
+    parser: '@typescript-eslint/parser',
     rules: {
         'array-bracket-newline': ['error', 'consistent'],
         'array-bracket-spacing': 'error',
@@ -19,11 +21,11 @@ module.exports = {
             after: true,
         }],
         'brace-style': ['error', '1tbs'],
-        'camelcase': ['error', {
-            ignoreDestructuring: true,
-            ignoreImports: true,
-            allow: ['/A-Z/', '^vehicle_lpn$'],
-        }],
+        // superseded by '@typescript-eslint/naming-convention'
+        // 'camelcase': ['error', {
+        //     ignoreDestructuring: true,
+        //     ignoreImports: true,
+        // }],
         'comma-dangle': ['error', 'only-multiline'],
         'comma-spacing': ['error', {
             before: false,
@@ -47,6 +49,12 @@ module.exports = {
         'indent': ['error', 4, {
             MemberExpression: 'off',
             SwitchCase: 1,
+            // indentations with decorators are broken in eslint 8
+            ignoredNodes: [
+                'FunctionExpression > .params[decorators.length > 0]',
+                'FunctionExpression > .params > :matches(Decorator, :not(:first-child))',
+                'ClassBody.body > PropertyDefinition[decorators.length > 0] > .key',
+            ],
         }],
         'jsx-quotes': ['error', 'prefer-double'],
         'key-spacing': ['error', {
@@ -171,5 +179,72 @@ module.exports = {
         'unicorn/prefer-ternary': 'off',
         'unicorn/throw-new-error': 'off',
         'unicorn/prevent-abbreviations': 'off',
+
+        'camelCase': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/naming-convention': [
+            'error',
+            {
+                selector: 'default',
+                format: ['camelCase'],
+                filter: {
+                    regex: '^(_|_id)$',
+                    match: false
+                },
+            },
+            {
+                selector: 'variable',
+                // TODO: PascalCase if variable contains JSX element
+                format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+            },
+            {
+                selector: 'variable',
+                modifiers: ['destructured'],
+                format: null,
+            },
+            {
+                selector: 'function',
+                // TODO: PascalCase if function returns JSX element
+                format: ['camelCase', 'PascalCase'],
+            },
+            {
+                selector: ['typeLike', 'enumMember'],
+                format: ['PascalCase'],
+            },
+            {
+                selector: 'memberLike',
+                modifiers: ['private'],
+                format: ['camelCase'],
+                leadingUnderscore: 'require',
+            },
+            {
+                selector: [
+                  'classProperty',
+                  'objectLiteralProperty',
+                  'typeProperty',
+                  'classMethod',
+                  'objectLiteralMethod',
+                  'typeMethod',
+                  'accessor',
+                  'enumMember'
+                ],
+                modifiers: ['requiresQuotes'],
+                format: null,
+            },
+        ],
+
+        // TODO?
+        // 'putout/putout': [
+        //     'error',
+        //     {
+        //         rules: {
+        //             'remove-newline-after-default-import': 'error',
+        //             'remove-newline-from-empty-object': 'error',
+        //             'remove-empty-newline-before-first-specifier': 'error',
+        //             'remove-empty-newline-after-last-specifier': 'error',
+        //         },
+        //     }
+        // ],
     }
 }

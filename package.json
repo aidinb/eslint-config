@@ -15,13 +15,14 @@
     "homepage": "https://bitbucket.org/MIDP1/eslint-config-woshapp#readme",
     "peerDependencies": {
         "@babel/core": "^7.16.3",
-        "@babel/eslint-parser": "^7.16.3",
-        "eslint": "7.32.0",
-        "eslint-plugin-decorator-position": "^4.0.1",
+        "@babel/eslint-parser": "^7.18.2",
+        "@typescript-eslint/eslint-plugin": "^5.26.0",
+        "@typescript-eslint/parser": "^5.26.0",
+        "eslint": "^8.16.0",
         "eslint-plugin-import": "^2.25.3",
         "eslint-plugin-n": "^15.0.1",
         "eslint-plugin-promise": "^5.1.1",
         "eslint-plugin-react": "^7.27.1",
-        "eslint-plugin-unicorn": "40.1.0"
+        "eslint-plugin-unicorn": "^42.1.0"
     }
 }
