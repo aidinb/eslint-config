@@ -2,13 +2,17 @@ module.exports = {
     env: {
         es6: true,
     },
+    parser: '@typescript-eslint/parser',
+    plugins: [
+        '@typescript-eslint',
+    ],
     extends: [
         'eslint:recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
         'plugin:promise/recommended',
         'plugin:unicorn/recommended',
-        'plugin:@typescript-eslint/recommended',
     ],
-    parser: '@typescript-eslint/parser',
     rules: {
         'array-bracket-newline': ['error', 'consistent'],
         'array-bracket-spacing': 'error',
@@ -46,16 +50,16 @@ module.exports = {
         'func-call-spacing': ['error', 'never'],
         'function-call-argument-newline': ['error', 'consistent'],
         'function-paren-newline': ['error', 'consistent'],
-        'indent': ['error', 4, {
-            MemberExpression: 'off',
-            SwitchCase: 1,
-            // indentations with decorators are broken in eslint 8
-            ignoredNodes: [
-                'FunctionExpression > .params[decorators.length > 0]',
-                'FunctionExpression > .params > :matches(Decorator, :not(:first-child))',
-                'ClassBody.body > PropertyDefinition[decorators.length > 0] > .key',
-            ],
-        }],
+        // superseded by '@typescript-eslint/indent'
+        // 'indent': ['error', 4, {
+        //     MemberExpression: 'off',
+        //     SwitchCase: 1,
+        //     ignoredNodes: [
+        //         'FunctionExpression > .params[decorators.length > 0]',
+        //         'FunctionExpression > .params > :matches(Decorator, :not(:first-child))',
+        //         'ClassBody.body > PropertyDefinition[decorators.length > 0] > .key',
+        //     ],
+        // }],
         'jsx-quotes': ['error', 'prefer-double'],
         'key-spacing': ['error', {
             beforeColon: false,
@@ -180,22 +184,38 @@ module.exports = {
         'unicorn/throw-new-error': 'off',
         'unicorn/prevent-abbreviations': 'off',
 
-        'camelCase': 'off',
+        'camelcase': 'off',
+        'indent': 'off',
+        'no-undef': 'off',
+        '@typescript-eslint/indent': ['error', 4, {
+            MemberExpression: 'off',
+            SwitchCase: 1,
+            // indentations with decorators are broken in eslint 8. https://github.com/typescript-eslint/typescript-eslint/issues/1824
+            ignoredNodes: [
+                'PropertyDefinition[decorators]',
+            ],
+        }],
         '@typescript-eslint/no-empty-function': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-this-alias': 'off',
         '@typescript-eslint/naming-convention': [
             'error',
             {
                 selector: 'default',
                 format: ['camelCase'],
                 filter: {
-                    regex: '^(_|_id)$',
+                    regex: '^(_|_id|IS_TEST_VERSION)$',
                     match: false
                 },
             },
             {
                 selector: 'variable',
-                // TODO: PascalCase if variable contains JSX element
+                /**
+                 * TODO:
+                 * - allow PascalCase only if variable contains JSX element
+                 * - allow UPPER_CASE only if variable is defined in top scope
+                 */
+                modifiers: ['global'],
                 format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
             },
             {
@@ -205,7 +225,8 @@ module.exports = {
             },
             {
                 selector: 'function',
-                // TODO: PascalCase if function returns JSX element
+                // TODO: allow PascalCase only if function returns JSX element
+                modifiers: ['global'],
                 format: ['camelCase', 'PascalCase'],
             },
             {

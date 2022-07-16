@@ -4,15 +4,15 @@ module.exports = {
         jest: true,
         es2022: true,
     },
+    plugins: [
+        'react',
+        'decorator-position',
+    ],
     extends: [
         'plugin:react/recommended',
         'plugin:react/jsx-runtime',
         'plugin:import/recommended',
         './index.js',
-    ],
-    plugins: [
-        'react',
-        // 'decorator-position',
     ],
     settings: {
         react: {
@@ -40,11 +40,10 @@ module.exports = {
         },
     },
     rules: {
-        // TODO: implement when it supports Eslint 8
-        // 'decorator-position/decorator-position': ['error', {
-        //     properties: 'above',
-        //     methods: 'above',
-        // }],
+        'decorator-position/decorator-position': ['error', {
+            properties: 'above',
+            methods: 'above',
+        }],
         'import/no-commonjs': 'error',
         'react/jsx-child-element-spacing': 'error',
         'react/jsx-curly-brace-presence': ['error', 'never'],
