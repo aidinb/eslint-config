@@ -206,11 +206,11 @@ module.exports = {
                 },
             },
             {
-                selector: 'variable',
                 /**
                  * TODO:
                  * - allow PascalCase only if variable contains JSX element
                  */
+                selector: 'variable',
                 modifiers: ['global'],
                 format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
             },
@@ -220,8 +220,8 @@ module.exports = {
                 format: null,
             },
             {
-                selector: 'function',
                 // TODO: allow PascalCase only if function returns JSX element
+                selector: 'function',
                 modifiers: ['global'],
                 format: ['camelCase', 'PascalCase'],
             },
