@@ -29,6 +29,7 @@ module.exports = {
         // 'camelcase': ['error', {
         //     ignoreDestructuring: true,
         //     ignoreImports: true,
+        //     allow: ['/A-Z/', '^vehicle_lpn$'],
         // }],
         'comma-dangle': ['error', 'only-multiline'],
         'comma-spacing': ['error', {
@@ -54,11 +55,6 @@ module.exports = {
         // 'indent': ['error', 4, {
         //     MemberExpression: 'off',
         //     SwitchCase: 1,
-        //     ignoredNodes: [
-        //         'FunctionExpression > .params[decorators.length > 0]',
-        //         'FunctionExpression > .params > :matches(Decorator, :not(:first-child))',
-        //         'ClassBody.body > PropertyDefinition[decorators.length > 0] > .key',
-        //     ],
         // }],
         'jsx-quotes': ['error', 'prefer-double'],
         'key-spacing': ['error', {
@@ -184,6 +180,7 @@ module.exports = {
         'unicorn/throw-new-error': 'off',
         'unicorn/prevent-abbreviations': 'off',
 
+        // @typescript-eslint/parser specific rules
         'camelcase': 'off',
         'indent': 'off',
         'no-undef': 'off',
