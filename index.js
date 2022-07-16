@@ -2,8 +2,14 @@ module.exports = {
     env: {
         es6: true,
     },
+    parser: '@typescript-eslint/parser',
+    plugins: [
+        '@typescript-eslint',
+    ],
     extends: [
         'eslint:recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
         'plugin:promise/recommended',
         'plugin:unicorn/recommended',
     ],
@@ -19,11 +25,12 @@ module.exports = {
             after: true,
         }],
         'brace-style': ['error', '1tbs'],
-        'camelcase': ['error', {
-            ignoreDestructuring: true,
-            ignoreImports: true,
-            allow: ['/A-Z/', '^vehicle_lpn$'],
-        }],
+        // superseded by '@typescript-eslint/naming-convention'
+        // 'camelcase': ['error', {
+        //     ignoreDestructuring: true,
+        //     ignoreImports: true,
+        //     allow: ['/A-Z/', '^vehicle_lpn$'],
+        // }],
         'comma-dangle': ['error', 'only-multiline'],
         'comma-spacing': ['error', {
             before: false,
@@ -44,10 +51,11 @@ module.exports = {
         'func-call-spacing': ['error', 'never'],
         'function-call-argument-newline': ['error', 'consistent'],
         'function-paren-newline': ['error', 'consistent'],
-        'indent': ['error', 4, {
-            MemberExpression: 'off',
-            SwitchCase: 1,
-        }],
+        // superseded by '@typescript-eslint/indent'
+        // 'indent': ['error', 4, {
+        //     MemberExpression: 'off',
+        //     SwitchCase: 1,
+        // }],
         'jsx-quotes': ['error', 'prefer-double'],
         'key-spacing': ['error', {
             beforeColon: false,
@@ -171,5 +179,76 @@ module.exports = {
         'unicorn/prefer-ternary': 'off',
         'unicorn/throw-new-error': 'off',
         'unicorn/prevent-abbreviations': 'off',
+
+        // @typescript-eslint/parser specific rules
+        'camelcase': 'off',
+        'indent': 'off',
+        'no-undef': 'off',
+        '@typescript-eslint/indent': ['error', 4, {
+            MemberExpression: 'off',
+            SwitchCase: 1,
+            // indentations with decorators are broken in eslint 8. https://github.com/typescript-eslint/typescript-eslint/issues/1824
+            ignoredNodes: [
+                'PropertyDefinition[decorators]',
+            ],
+        }],
+        '@typescript-eslint/no-empty-function': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-this-alias': 'off',
+        '@typescript-eslint/naming-convention': [
+            'error',
+            {
+                selector: 'default',
+                format: ['camelCase'],
+                filter: {
+                    regex: '^(_|_id|IS_TEST_VERSION)$',
+                    match: false
+                },
+            },
+            {
+                /**
+                 * TODO:
+                 * - allow PascalCase only if variable contains JSX element
+                 */
+                selector: 'variable',
+                modifiers: ['global'],
+                format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+            },
+            {
+                selector: 'variable',
+                modifiers: ['destructured'],
+                format: null,
+            },
+            {
+                // TODO: allow PascalCase only if function returns JSX element
+                selector: 'function',
+                modifiers: ['global'],
+                format: ['camelCase', 'PascalCase'],
+            },
+            {
+                selector: ['typeLike', 'enumMember'],
+                format: ['PascalCase'],
+            },
+            {
+                selector: 'memberLike',
+                modifiers: ['private'],
+                format: ['camelCase'],
+                leadingUnderscore: 'require',
+            },
+            {
+                selector: [
+                  'classProperty',
+                  'objectLiteralProperty',
+                  'typeProperty',
+                  'classMethod',
+                  'objectLiteralMethod',
+                  'typeMethod',
+                  'accessor',
+                  'enumMember'
+                ],
+                modifiers: ['requiresQuotes'],
+                format: null,
+            },
+        ],
     }
 }

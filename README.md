@@ -2,7 +2,7 @@
 
 ### Install
 ```
-npm install --save-dev eslint-config-woshapp eslint@7.32.0 eslint-plugin-n eslint-plugin-promise eslint-plugin-unicorn@40.1.0
+npm install --save-dev eslint-config-woshapp eslint eslint-plugin-n eslint-plugin-promise eslint-plugin-unicorn typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
 ### Usage
@@ -18,7 +18,7 @@ Add the following to `.eslintrc.js`:
 
 ### Install
 ```
-npm install --save-dev eslint-config-woshapp @babel/core @babel/eslint-parser eslint@7.32.0 eslint-plugin-react eslint-plugin-import eslint-plugin-decorator-position eslint-plugin-promise eslint-plugin-unicorn@40.1.0
+npm install --save-dev eslint-config-woshapp eslint eslint-plugin-react eslint-plugin-import eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-decorator-position  typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
 ### Usage

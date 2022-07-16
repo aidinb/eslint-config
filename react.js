@@ -2,16 +2,17 @@ module.exports = {
     env: {
         browser: true,
         jest: true,
+        es2022: true,
     },
+    plugins: [
+        'react',
+        'decorator-position',
+    ],
     extends: [
         'plugin:react/recommended',
         'plugin:react/jsx-runtime',
         'plugin:import/recommended',
         './index.js',
-    ],
-    plugins: [
-        'react',
-        'decorator-position',
     ],
     settings: {
         react: {
@@ -29,9 +30,8 @@ module.exports = {
             },
         ],
     },
-    parser: '@babel/eslint-parser',
     parserOptions: {
-        ecmaVersion: 2021,
+        ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
             legacyDecorators: true,
