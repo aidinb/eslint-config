@@ -210,7 +210,6 @@ module.exports = {
                 /**
                  * TODO:
                  * - allow PascalCase only if variable contains JSX element
-                 * - allow UPPER_CASE only if variable is defined in top scope
                  */
                 modifiers: ['global'],
                 format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
