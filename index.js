@@ -251,18 +251,5 @@ module.exports = {
                 format: null,
             },
         ],
-
-        // TODO?
-        // 'putout/putout': [
-        //     'error',
-        //     {
-        //         rules: {
-        //             'remove-newline-after-default-import': 'error',
-        //             'remove-newline-from-empty-object': 'error',
-        //             'remove-empty-newline-before-first-specifier': 'error',
-        //             'remove-empty-newline-after-last-specifier': 'error',
-        //         },
-        //     }
-        // ],
     }
 }
