@@ -5,7 +5,7 @@ module.exports = {
     },
     extends: [
         /**
-         * plugin-in is forked from eslint-plugin-node (which is no longer maintained)
+         * plugin-n is forked from eslint-plugin-node (which is no longer maintained)
          * @see https://github.com/weiran-zsd/eslint-plugin-node
          */
         'plugin:n/recommended',
