@@ -18,7 +18,7 @@ Add the following to `.eslintrc.js`:
 
 ### Install
 ```
-npm install --save-dev eslint-config-woshapp eslint eslint-plugin-react eslint-plugin-import eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-decorator-position  typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+npm install --save-dev eslint-config-woshapp eslint eslint-plugin-react eslint-plugin-import eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-decorator-position typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
 ### Usage

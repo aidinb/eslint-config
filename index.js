@@ -29,7 +29,7 @@ module.exports = {
         // 'camelcase': ['error', {
         //     ignoreDestructuring: true,
         //     ignoreImports: true,
-        //     allow: ['/A-Z/', '^vehicle_lpn$'],
+        //     allow: ['/A-Z/'],
         // }],
         'comma-dangle': ['error', 'only-multiline'],
         'comma-spacing': ['error', {
@@ -98,6 +98,7 @@ module.exports = {
         'no-nested-ternary': 'error',
         'no-throw-literal': 'error',
         'no-trailing-spaces': 'error',
+        'no-undef': 'off',
         'no-unneeded-ternary': 'error',
         'no-unused-vars': 'off',
         'no-useless-concat': 'error',
@@ -183,9 +184,7 @@ module.exports = {
         // @typescript-eslint/parser specific rules
         'camelcase': 'off',
         'indent': 'off',
-        'no-undef': 'off',
         '@typescript-eslint/indent': ['error', 4, {
-            MemberExpression: 'off',
             SwitchCase: 1,
             // indentations with decorators are broken in eslint 8. https://github.com/typescript-eslint/typescript-eslint/issues/1824
             ignoredNodes: [
@@ -193,6 +192,7 @@ module.exports = {
             ],
         }],
         '@typescript-eslint/no-empty-function': 'off',
+        '@typescript-eslint/no-for-in-array': 'error',
         '@typescript-eslint/no-unused-vars': 'off',
         '@typescript-eslint/no-this-alias': 'off',
         '@typescript-eslint/naming-convention': [
@@ -206,10 +206,7 @@ module.exports = {
                 },
             },
             {
-                /**
-                 * TODO:
-                 * - allow PascalCase only if variable contains JSX element
-                 */
+                // TODO: allow PascalCase only if variable contains JSX element
                 selector: 'variable',
                 modifiers: ['global'],
                 format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
@@ -249,6 +246,34 @@ module.exports = {
                 modifiers: ['requiresQuotes'],
                 format: null,
             },
+            // TODO: force prefix on booleans? This also requires creating tsconfig.json
+            // {
+            //     selector: ['variable', 'parameter', 'property', 'accessor'],
+            //     types: ['boolean'],
+            //     format: ['PascalCase'],
+            //     prefix: ['is', 'has', 'are', 'can', 'should', 'did', 'will'],
+            // },
         ],
+        '@typescript-eslint/prefer-optional-chain': 'error',
+        /**
+         * The rules below require creating tsconfig.json and pointing to it in parserOptions
+         * 
+         * Example tsconfig.json:
+         *  {
+         *      "compilerOptions": {
+         *          "target": "es6",
+         *          "allowJs": true,
+         *          "noEmit": true,
+         *          "experimentalDecorators": true,
+         *          "useDefineForClassFields": true,
+         *      },
+         *      "exclude": ["node_modules"]
+         *  }
+         */
+        // '@typescript-eslint/await-thenable': 'error',
+        // '@typescript-eslint/no-implied-eval': 'error',
+        // '@typescript-eslint/no-misused-promises': 'error',
+        // '@typescript-eslint/prefer-includes': 'error',
+        // '@typescript-eslint/prefer-string-starts-ends-with': 'error',
     }
 }
