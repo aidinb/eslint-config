@@ -257,23 +257,11 @@ module.exports = {
         '@typescript-eslint/prefer-optional-chain': 'error',
         /**
          * The rules below require creating tsconfig.json and pointing to it in parserOptions
-         * 
-         * Example tsconfig.json:
-         *  {
-         *      "compilerOptions": {
-         *          "target": "es6",
-         *          "allowJs": true,
-         *          "noEmit": true,
-         *          "experimentalDecorators": true,
-         *          "useDefineForClassFields": true,
-         *      },
-         *      "exclude": ["node_modules"]
-         *  }
          */
-        // '@typescript-eslint/await-thenable': 'error',
-        // '@typescript-eslint/no-implied-eval': 'error',
-        // '@typescript-eslint/no-misused-promises': 'error',
-        // '@typescript-eslint/prefer-includes': 'error',
-        // '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+        '@typescript-eslint/await-thenable': 'error',
+        '@typescript-eslint/no-implied-eval': 'error',
+        '@typescript-eslint/no-misused-promises': 'error',
+        '@typescript-eslint/prefer-includes': 'error',
+        '@typescript-eslint/prefer-string-starts-ends-with': 'error',
     }
 }

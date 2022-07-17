@@ -1,3 +1,28 @@
+## configuration
+Some rules in @typescript-eslint requires a tsconfig to exist.
+
+Add the following to `.eslintrc.js`:
+```javascript
+{
+    "parserOptions": {
+        "project": "./tsconfig.json",
+    },
+}
+```
+Add e.g. the following to `tsconfig.json`:
+```json
+{
+    "compilerOptions": {
+        "target": "es6",
+        "allowJs": true,
+        "noEmit": true,
+        "experimentalDecorators": true,
+        "useDefineForClassFields": true,
+    },
+    "exclude": ["node_modules"]
+}
+```
+
 ## Node rules
 
 ### Install
@@ -10,7 +35,7 @@ Add the following to `.eslintrc.js`:
 
 ```javascript
 {
-    "extends": "woshapp/node"
+    "extends": ["woshapp/node"]
 }
 ```
 
@@ -25,6 +50,6 @@ npm install --save-dev eslint-config-woshapp eslint eslint-plugin-react eslint-p
 Add the following to `.eslintrc.js`:
 ```javascript
 {
-    "extends": "woshapp/react"
+    "extends": ["woshapp/react"]
 }
 ```
