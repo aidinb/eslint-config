@@ -209,7 +209,7 @@ module.exports = {
                 // TODO: allow PascalCase only if variable contains JSX element
                 selector: 'variable',
                 modifiers: ['global'],
-                format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+                format: ['camelCase', 'UPPER_CASE'],
             },
             {
                 selector: 'variable',

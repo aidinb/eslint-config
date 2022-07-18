@@ -1,4 +1,4 @@
-## configuration
+## Configuration
 Some rules in @typescript-eslint requires a tsconfig to exist.
 
 Add the following to `.eslintrc.js`:
