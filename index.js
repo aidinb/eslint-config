@@ -42,6 +42,7 @@ module.exports = {
         'default-case': ['error', {
             commentPattern: '^no default$',
         }],
+        'default-param-last': 'error',
         'dot-location': ['error', 'property'],
         'dot-notation': 'error',
         'eol-last': ['error', 'always'],
@@ -83,9 +84,26 @@ module.exports = {
         }],
         'no-console': 'off',
         'no-else-return': 'error',
+        'no-floating-decimal': 'error',
         'no-implicit-coercion': 'error',
+        'no-mixed-operators': ['error', {
+            groups: [
+                ['%', '**'],
+                ['%', '+'],
+                ['%', '-'],
+                ['%', '*'],
+                ['%', '/'],
+                ['/', '*'],
+                ['&', '|', '<<', '>>', '>>>'],
+                ['==', '!=', '===', '!=='],
+                ['&&', '||'],
+            ],
+            allowSamePrecedence: true,
+        }],
         'no-multiple-empty-lines': ['error', {
             max: 1,
+            maxBOF: 0,
+            maxEOF: 0,
         }],
         'no-multi-spaces': ['error', {
             ignoreEOLComments: false,
@@ -99,10 +117,17 @@ module.exports = {
         'no-throw-literal': 'error',
         'no-trailing-spaces': 'error',
         'no-undef': 'off',
-        'no-unneeded-ternary': 'error',
+        'no-unneeded-ternary': ['error', {
+            defaultAssignment: false,
+        }],
         'no-unused-vars': 'off',
         'no-useless-concat': 'error',
         'no-useless-escape': 'error',
+        'no-useless-rename': ['error', {
+            ignoreDestructuring: false,
+            ignoreImport: false,
+            ignoreExport: false,
+        }],
         'no-useless-return': 'error',
         'no-var': 'error',
         'no-whitespace-before-property': 'error',
