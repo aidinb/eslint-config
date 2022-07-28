@@ -114,6 +114,7 @@ module.exports = {
             },
         }],
         'no-nested-ternary': 'error',
+        'no-tabs': 'error',
         'no-throw-literal': 'error',
         'no-trailing-spaces': 'error',
         'no-undef': 'off',
@@ -143,6 +144,7 @@ module.exports = {
             initialized: 'never',
             uninitialized: 'consecutive',
         }],
+        'operator-assignment': ['error', 'always'],
         'operator-linebreak': ['error', 'before'],
         'padded-blocks': ['error', 'never'],
         'prefer-const': 'error',
@@ -180,6 +182,7 @@ module.exports = {
             },
         }],
         'switch-colon-spacing': 'error',
+        'unicode-bom': ['error', 'never'],
         'yoda': 'error',
         'unicorn/catch-error-name': ['error', {
             name: 'err',
@@ -271,7 +274,7 @@ module.exports = {
                 modifiers: ['requiresQuotes'],
                 format: null,
             },
-            // TODO: force prefix on booleans? This also requires creating tsconfig.json
+            // TODO: force prefix on booleans?
             // {
             //     selector: ['variable', 'parameter', 'property', 'accessor'],
             //     types: ['boolean'],
@@ -279,14 +282,16 @@ module.exports = {
             //     prefix: ['is', 'has', 'are', 'can', 'should', 'did', 'will'],
             // },
         ],
-        '@typescript-eslint/prefer-optional-chain': 'error',
-        /**
-         * The rules below require creating tsconfig.json and pointing to it in parserOptions
-         */
         '@typescript-eslint/await-thenable': 'error',
         '@typescript-eslint/no-implied-eval': 'error',
         '@typescript-eslint/no-misused-promises': 'error',
+        '@typescript-eslint/prefer-for-of': 'error',
         '@typescript-eslint/prefer-includes': 'error',
+        '@typescript-eslint/prefer-nullish-coalescing': ['error', {
+            ignoreConditionalTests: true,
+            ignoreMixedLogicalExpressions: true,
+        }],
+        '@typescript-eslint/prefer-optional-chain': 'error',
         '@typescript-eslint/prefer-string-starts-ends-with': 'error',
     }
 }

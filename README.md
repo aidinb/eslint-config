@@ -1,5 +1,5 @@
 ## Configuration
-Some rules in @typescript-eslint requires a tsconfig to exist.
+Some type-aware lint rules in @typescript-eslint require a TSConfig to exist. The project itself does not need to use typescript.
 
 Add the following to `.eslintrc.js`:
 ```javascript
@@ -48,6 +48,7 @@ npm install --save-dev eslint-config-woshapp eslint eslint-plugin-react eslint-p
 
 ### Usage
 Add the following to `.eslintrc.js`:
+
 ```javascript
 {
     "extends": ["woshapp/react"]
