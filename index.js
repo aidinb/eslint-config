@@ -117,7 +117,7 @@ module.exports = {
         'no-tabs': 'error',
         'no-throw-literal': 'error',
         'no-trailing-spaces': 'error',
-        'no-undef': 'off',
+        'no-undef': 'error',
         'no-unneeded-ternary': ['error', {
             defaultAssignment: false,
         }],
