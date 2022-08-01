@@ -4,6 +4,11 @@ module.exports = {
         jest: true,
         es2022: true,
     },
+    globals: {
+        document: 'readonly',
+        navigator: 'readonly',
+        window: 'readonly',
+    },
     plugins: [
         'react',
         'decorator-position',
