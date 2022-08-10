@@ -115,6 +115,7 @@ module.exports = {
             },
         }],
         'no-nested-ternary': 'error',
+        'no-return-assign': 'error',
         'no-tabs': 'error',
         'no-throw-literal': 'error',
         'no-trailing-spaces': 'error',
