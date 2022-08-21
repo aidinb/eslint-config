@@ -285,6 +285,7 @@ module.exports = {
             // },
         ],
         '@typescript-eslint/await-thenable': 'error',
+        '@typescript-eslint/ban-ts-comment': 'off',
         '@typescript-eslint/no-implied-eval': 'error',
         '@typescript-eslint/no-misused-promises': 'error',
         '@typescript-eslint/prefer-for-of': 'error',
