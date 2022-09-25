@@ -26,7 +26,13 @@ module.exports = {
             after: true,
         }],
         'brace-style': ['error', '1tbs'],
-        'comma-dangle': ['error', 'only-multiline'],
+        'comma-dangle': ['error', {
+            arrays: 'always-multiline',
+            objects: 'only-multiline',
+            imports: 'always-multiline',
+            exports: 'always-multiline',
+            functions: 'only-multiline',
+        }],
         'comma-spacing': ['error', {
             before: false,
             after: true,
