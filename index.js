@@ -67,6 +67,9 @@ module.exports = {
         'lines-between-class-members': ['error', 'always', {
             exceptAfterSingleLine: true,
         }],
+        'logical-assignment-operators': ['error', 'always', {
+            enforceForIfStatements: true,
+        }],
         'max-len': ['error', {
             code: 140,
             ignoreStrings: true,
@@ -208,6 +211,7 @@ module.exports = {
         'unicorn/throw-new-error': 'off',
         'unicorn/prevent-abbreviations': 'off',
 
+        // enforces American spelling
         'communist-spelling/communist-spelling': ['error', {
             ignoreDestructuring: true,
         }],
