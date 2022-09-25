@@ -284,7 +284,7 @@ module.exports = {
             //     selector: ['variable', 'parameter', 'property', 'accessor'],
             //     types: ['boolean'],
             //     format: ['PascalCase'],
-            //     prefix: ['is', 'has', 'are', 'can', 'should', 'did', 'will'],
+            //     prefix: ['is', 'has', 'are', 'can', 'should', 'did', 'will', 'was'],
             // },
         ],
         '@typescript-eslint/await-thenable': 'error',
