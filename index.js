@@ -297,7 +297,7 @@ module.exports = {
             //     selector: ['variable', 'parameter', 'property'],
             //     types: ['array'],
             //     format: ['camelCase'],
-            //     suffix: ['s', 'S', 'List', 'Array'],
+            //     suffix: ['s', 'S', 'List'],
             //     filter: {
             //         /**
             //          * NOTE: $ prefix does not work due to a bug
