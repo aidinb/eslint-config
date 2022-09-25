@@ -14,10 +14,18 @@ Add e.g. the following to `tsconfig.json`:
 {
     "compilerOptions": {
         "target": "es6",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "jsx": "react-jsx",
         "allowJs": true,
+        "checkJs": true,
         "noEmit": true,
         "experimentalDecorators": true,
         "useDefineForClassFields": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "skipLibCheck": true,
     },
     "exclude": ["node_modules"]
 }
@@ -27,7 +35,7 @@ Add e.g. the following to `tsconfig.json`:
 
 ### Install
 ```
-npm install --save-dev eslint-config-woshapp eslint eslint-plugin-n eslint-plugin-promise eslint-plugin-unicorn typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+npm install --save-dev eslint-config-woshapp eslint eslint-plugin-n eslint-plugin-promise eslint-plugin-unicorn typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-communist-spelling
 ```
 
 ### Usage
@@ -43,7 +51,7 @@ Add the following to `.eslintrc.js`:
 
 ### Install
 ```
-npm install --save-dev eslint-config-woshapp eslint eslint-plugin-react eslint-plugin-import eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-decorator-position typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+npm install --save-dev eslint-config-woshapp eslint eslint-plugin-react eslint-plugin-import eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-decorator-position typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-communist-spelling
 ```
 
 ### Usage

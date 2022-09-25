@@ -5,6 +5,7 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     plugins: [
         '@typescript-eslint',
+        'communist-spelling',
     ],
     extends: [
         'eslint:recommended',
@@ -25,12 +26,6 @@ module.exports = {
             after: true,
         }],
         'brace-style': ['error', '1tbs'],
-        // superseded by '@typescript-eslint/naming-convention'
-        // 'camelcase': ['error', {
-        //     ignoreDestructuring: true,
-        //     ignoreImports: true,
-        //     allow: ['/A-Z/'],
-        // }],
         'comma-dangle': ['error', 'only-multiline'],
         'comma-spacing': ['error', {
             before: false,
@@ -52,11 +47,6 @@ module.exports = {
         'func-call-spacing': ['error', 'never'],
         'function-call-argument-newline': ['error', 'consistent'],
         'function-paren-newline': ['error', 'consistent'],
-        // superseded by '@typescript-eslint/indent'
-        // 'indent': ['error', 4, {
-        //     MemberExpression: 'off',
-        //     SwitchCase: 1,
-        // }],
         'jsx-quotes': ['error', 'prefer-double'],
         'key-spacing': ['error', {
             beforeColon: false,
@@ -186,6 +176,7 @@ module.exports = {
         'switch-colon-spacing': 'error',
         'unicode-bom': ['error', 'never'],
         'yoda': 'error',
+
         'unicorn/catch-error-name': ['error', {
             name: 'err',
         }],
@@ -211,9 +202,11 @@ module.exports = {
         'unicorn/throw-new-error': 'off',
         'unicorn/prevent-abbreviations': 'off',
 
+        'communist-spelling/communist-spelling': ['error', {
+            ignoreDestructuring: true,
+        }],
+
         // @typescript-eslint/parser specific rules
-        'camelcase': 'off',
-        'indent': 'off',
         '@typescript-eslint/indent': ['error', 4, {
             SwitchCase: 1,
             // indentations with decorators are broken in eslint 8. https://github.com/typescript-eslint/typescript-eslint/issues/1824
