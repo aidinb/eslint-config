@@ -283,7 +283,7 @@ module.exports = {
             // {
             //     selector: ['variable', 'parameter', 'property', 'accessor'],
             //     types: ['boolean'],
-            //     format: ['PascalCase'],
+            //     format: ['camelCase'],
             //     prefix: ['is', 'has', 'are', 'can', 'should', 'did', 'will', 'was'],
             // },
             // TODO: force plural naming on arrays?
