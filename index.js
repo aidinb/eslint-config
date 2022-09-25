@@ -274,7 +274,7 @@ module.exports = {
                   'objectLiteralMethod',
                   'typeMethod',
                   'accessor',
-                  'enumMember'
+                  'enumMember',
                 ],
                 modifiers: ['requiresQuotes'],
                 format: null,
@@ -285,6 +285,28 @@ module.exports = {
             //     types: ['boolean'],
             //     format: ['PascalCase'],
             //     prefix: ['is', 'has', 'are', 'can', 'should', 'did', 'will', 'was'],
+            // },
+            // TODO: force plural naming on arrays?
+            // {
+            //     /**
+            //      * Known bugs in typescript-eslint:
+            //      * 1) The regex filter does not work for properties with $ prefix (e.g. "$in")
+            //      * 2) The modifier for destructured is sometimes ignored. See e.g. <Menu onClick={({ item, key, keyPath, domEvent }) => {}}
+            //      *    where it warns about keyPath which is an array
+            //      */
+            //     selector: ['variable', 'parameter', 'property'],
+            //     types: ['array'],
+            //     format: ['camelCase'],
+            //     suffix: ['s', 'S', 'List', 'Array'],
+            //     filter: {
+            //         /**
+            //          * NOTE: $ prefix does not work due to a bug
+            //          * - allow mongodb operators such as $in
+            //          * - dataIndex is ignored because antd uses that property in table
+            //          */
+            //         regex: '^($in|dataIndex)$',
+            //         match: false
+            //     },
             // },
         ],
         '@typescript-eslint/await-thenable': 'error',
