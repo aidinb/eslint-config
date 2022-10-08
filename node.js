@@ -12,6 +12,6 @@ module.exports = {
         './index.js',
     ],
     rules: {
-        'node/handle-callback-err': ['error', 'err'],
+        'n/handle-callback-err': ['error', 'err'],
     }
 }
