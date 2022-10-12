@@ -189,12 +189,14 @@ module.exports = {
         'unicorn/catch-error-name': ['error', {
             name: 'err',
         }],
+        'unicorn/no-array-reduce': ['error', {
+            allowSimpleOperations: true,
+        }],
         'unicorn/consistent-function-scoping': 'off',
         'unicorn/filename-case': 'off',
         'unicorn/new-for-builtins': 'off',
         'unicorn/no-array-callback-reference': 'off',
         'unicorn/no-array-for-each': 'off',
-        'unicorn/no-array-reduce': 'off',
         'unicorn/no-lonely-if': 'off',
         'unicorn/no-null': 'off',
         'unicorn/no-object-as-default-parameter': 'off',
