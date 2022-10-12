@@ -192,6 +192,7 @@ module.exports = {
         'unicorn/no-array-reduce': ['error', {
             allowSimpleOperations: true,
         }],
+        'unicorn/switch-case-braces': ['error', 'avoid'],
         'unicorn/consistent-function-scoping': 'off',
         'unicorn/filename-case': 'off',
         'unicorn/new-for-builtins': 'off',
