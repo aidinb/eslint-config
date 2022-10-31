@@ -83,6 +83,10 @@ module.exports = {
         }],
         'no-console': 'off',
         'no-else-return': 'error',
+        'no-extra-parens': ['error', 'all', {
+            ignoreJSX: 'all',
+            nestedBinaryExpressions: false,
+        }],
         'no-floating-decimal': 'error',
         'no-implicit-coercion': 'error',
         'no-mixed-operators': ['error', {
@@ -198,6 +202,7 @@ module.exports = {
         'unicorn/new-for-builtins': 'off',
         'unicorn/no-array-callback-reference': 'off',
         'unicorn/no-array-for-each': 'off',
+        'unicorn/no-array-push-push': 'off',
         'unicorn/no-lonely-if': 'off',
         'unicorn/no-null': 'off',
         'unicorn/no-object-as-default-parameter': 'off',
