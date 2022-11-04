@@ -12,11 +12,13 @@ module.exports = {
     plugins: [
         'react',
         'decorator-position',
+        'mobx',
     ],
     extends: [
         'plugin:react/recommended',
         'plugin:react/jsx-runtime',
         'plugin:import/recommended',
+        'plugin:react-hooks/recommended',
         './index.js',
     ],
     settings: {
@@ -50,6 +52,7 @@ module.exports = {
             methods: 'above',
         }],
         'import/no-commonjs': 'error',
+        'mobx/missing-make-observable': 'error',
         'react/jsx-child-element-spacing': 'error',
         'react/jsx-curly-brace-presence': ['error', 'never'],
         'react/jsx-curly-newline': ['error', {
@@ -69,10 +72,17 @@ module.exports = {
             indentMode: 4,
             ignoreTernaryOperator: true,
         }],
+        // 'react/jsx-max-depth': ['error', {
+        //     max: 5,
+        // }],
         'react/jsx-max-props-per-line': ['error', {
             maximum: 2,
             when: 'multiline',
         }],
+        // 'react/jsx-newline': ['error', {
+        //     prevent: true,
+        //     allowMultilines: true,
+        // }],
         'react/jsx-pascal-case': 'error',
         'react/jsx-props-no-multi-spaces': 'error',
         'react/jsx-tag-spacing': ['error', {

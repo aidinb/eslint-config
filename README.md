@@ -51,7 +51,7 @@ Add the following to `.eslintrc.js`:
 
 ### Install
 ```
-npm install --save-dev eslint-config-woshapp eslint eslint-plugin-react eslint-plugin-import eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-decorator-position typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-communist-spelling
+npm install --save-dev eslint-config-woshapp eslint eslint-plugin-n eslint-plugin-promise eslint-plugin-unicorn typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-communist-spelling eslint-plugin-react eslint-plugin-decorator-position eslint-plugin-mobx eslint-plugin-react-hooks
 ```
 
 ### Usage
