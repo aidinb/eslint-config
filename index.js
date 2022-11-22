@@ -204,6 +204,7 @@ module.exports = {
         'unicorn/no-array-for-each': 'off',
         'unicorn/no-array-push-push': 'off',
         'unicorn/no-lonely-if': 'off',
+        'unicorn/no-negated-condition': 'off',
         'unicorn/no-null': 'off',
         'unicorn/no-object-as-default-parameter': 'off',
         'unicorn/no-this-assignment': 'off',
