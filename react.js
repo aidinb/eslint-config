@@ -91,6 +91,7 @@ module.exports = {
             afterOpening: 'never',
             beforeClosing: 'never',
         }],
+        'react/self-closing-comp': 'error',
         'react/display-name': 'off',
         'react/prop-types': 'off',
     }
