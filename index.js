@@ -306,7 +306,7 @@ module.exports = {
             //     selector: ['variable', 'parameter', 'property'],
             //     types: ['array'],
             //     format: ['camelCase'],
-            //     suffix: ['s', 'S', 'List'],
+            //     suffix: ['s', 'S', 'List', 'Array'],
             //     filter: {
             //         /**
             //          * NOTE: $ prefix does not work due to a bug
@@ -324,10 +324,11 @@ module.exports = {
         '@typescript-eslint/no-misused-promises': 'error',
         '@typescript-eslint/prefer-for-of': 'error',
         '@typescript-eslint/prefer-includes': 'error',
-        '@typescript-eslint/prefer-nullish-coalescing': ['error', {
-            ignoreConditionalTests: true,
-            ignoreMixedLogicalExpressions: true,
-        }],
+        // TODO: enable this rule when strictNullChecks=true in tsconfig
+        // '@typescript-eslint/prefer-nullish-coalescing': ['error', {
+        //     ignoreConditionalTests: true,
+        //     ignoreMixedLogicalExpressions: true,
+        // }],
         '@typescript-eslint/prefer-optional-chain': 'error',
         '@typescript-eslint/prefer-string-starts-ends-with': 'error',
     }

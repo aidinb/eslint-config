@@ -25,7 +25,7 @@ Add e.g. the following to `tsconfig.json`:
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "sourceMap": true,
-        "skipLibCheck": true,
+        "skipLibCheck": true
     },
     "exclude": ["node_modules"]
 }
