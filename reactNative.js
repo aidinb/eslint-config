@@ -11,7 +11,9 @@ module.exports = {
         "plugin:eqeqeq-fix/recommended",
         "plugin:import/errors",
         "plugin:import/warnings",
-        "./react.js",
+        'plugin:react/jsx-runtime',
+        'plugin:import/recommended',
+        'plugin:react-hooks/recommended',
     ],
     overrides: [
     ],
@@ -19,14 +21,49 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
+        ecmaFeatures: {
+            legacyDecorators: true,
+            experimentalDecorators: true,
+            jsx: true,
+        },
     },
     plugins: [
         "react",
         "react-native",
-        "unused-imports"
+        "unused-imports",
+        'decorator-position',
+        'mobx',
     ],
     rules: {
-        "react/prop-types": "off",
+        'decorator-position/decorator-position': ['error', {
+            properties: 'above',
+            methods: 'above',
+        }],
+        'mobx/missing-make-observable': 'error',
+        'react/jsx-child-element-spacing': 'error',
+        'react/jsx-curly-brace-presence': ['error', 'never'],
+        'react/jsx-curly-newline': ['error', {
+            multiline: 'consistent',
+            singleline: 'consistent'
+        }],
+        'react/jsx-curly-spacing': ['error', {
+            when: 'never',
+            children: true,
+        }],
+        'react/jsx-equals-spacing': ['error', 'never'],
+        'react/jsx-max-props-per-line': ['error', {
+            maximum: 2,
+            when: 'multiline',
+        }],
+        'react/jsx-pascal-case': 'error',
+        'react/jsx-props-no-multi-spaces': 'error',
+        'react/jsx-tag-spacing': ['error', {
+            closingSlash: 'never',
+            beforeSelfClosing: 'always',
+            afterOpening: 'never',
+            beforeClosing: 'never',
+        }],
+        'react/self-closing-comp': 'error',
         "react/destructuring-assignment": "off",
         "react/jsx-filename-extension": "off",
         "import/prefer-default-export": "off",
@@ -45,7 +82,7 @@ module.exports = {
         "import/no-import-module-exports": "off",
         "react/no-array-index-key": "off",
         "no-alert": "off",
-
+        "react/prop-types": "off",
         "no-param-reassign": "off",
         "prefer-destructuring": "off",
         "no-plusplus": "off",
@@ -67,6 +104,14 @@ module.exports = {
         "react/no-unstable-nested-components": "off",
         "consistent-return": "off",
         "array-callback-return": "off",
+        // 'react/jsx-indent': ['error', 4, {
+        //   checkAttributes: true,
+        //   indentLogicalExpressions: true,
+        // }],
+        // 'react/jsx-indent-props': ['error', {
+        //   indentMode: 4,
+        //   ignoreTernaryOperator: true,
+        // }],
 
     },
 };
