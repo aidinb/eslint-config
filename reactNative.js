@@ -11,7 +11,6 @@ module.exports = {
         "plugin:eqeqeq-fix/recommended",
         "plugin:import/errors",
         "plugin:import/warnings",
-        "./index.js",
         "./react.js",
     ],
     overrides: [
