@@ -8,7 +8,9 @@ module.exports = {
         "airbnb",
         "airbnb/hooks",
         "prettier",
-        "plugin:eqeqeq-fix/recommended"
+        "plugin:eqeqeq-fix/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
     ],
     overrides: [
     ],
@@ -42,6 +44,9 @@ module.exports = {
         "import/no-import-module-exports": "off",
         "react/no-array-index-key": "off",
         "no-alert": "off",
+
+        "no-param-reassign": "off",
+        "prefer-destructuring": "off",
         "no-plusplus": "off",
         "no-restricted-syntax": "off",
         "no-underscore-dangle": "off",
@@ -51,7 +56,17 @@ module.exports = {
             "warn",
             { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
 
-        ]
+        ],
+        // Try to make them ON as soon as possible by fixing the code
+        "import/no-unresolved": "off",
+        "no-nested-ternary": "off",
+        "import/default": "off",
+        "react-hooks/exhaustive-deps": "off",
+        "no-await-in-loop": "off",
+        "react/no-unstable-nested-components": "off",
+        "consistent-return": "off",
+        "array-callback-return": "off",
+
     },
 };
 
