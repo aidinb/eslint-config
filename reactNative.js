@@ -71,10 +71,10 @@ module.exports = {
             { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
 
         ],
-        'react/jsx-indent': ['error', 4, {
-            checkAttributes: true,
-            indentLogicalExpressions: true,
-        }],
+        // 'react/jsx-indent': ['error', 4, {
+        //     checkAttributes: true,
+        //     indentLogicalExpressions: true,
+        // }],
         'react/jsx-indent-props': ['error', {
             indentMode: 4,
             ignoreTernaryOperator: true,
