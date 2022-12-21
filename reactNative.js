@@ -13,8 +13,6 @@ module.exports = {
         'plugin:react/jsx-runtime',
         'plugin:import/recommended',
         'plugin:react-hooks/recommended',
-        './index.js',
-
     ],
     overrides: [
     ],
