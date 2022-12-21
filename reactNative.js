@@ -5,7 +5,7 @@ module.exports = {
     },
     extends: [
         "plugin:react/recommended",
-        "standard",
+        './index.js',
         "prettier",
         "plugin:eqeqeq-fix/recommended",
         "plugin:import/errors",
@@ -16,7 +16,6 @@ module.exports = {
     ],
     overrides: [
     ],
-    parser: "@babel/eslint-parser",
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
