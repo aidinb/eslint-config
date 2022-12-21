@@ -5,8 +5,7 @@ module.exports = {
     },
     extends: [
         "plugin:react/recommended",
-        "airbnb",
-        "airbnb/hooks",
+        "standard",
         "prettier",
         "plugin:eqeqeq-fix/recommended",
         "plugin:import/errors",
@@ -64,38 +63,20 @@ module.exports = {
             beforeClosing: 'never',
         }],
         'react/self-closing-comp': 'error',
-        "react/destructuring-assignment": "off",
-        "react/jsx-filename-extension": "off",
-        "import/prefer-default-export": "off",
-        "import/no-cycle": "off",
-        "no-shadow": "off",
-        "camelcase": "off",
-        "no-return-assign": "off",
-        "global-require": "off",
-        "import/order": "off",
-        "class-methods-use-this": "off",
-        "no-return-await": "off",
-        "no-console": "off",
         "import/named": "off",
-        "react/jsx-props-no-spreading": "off",
-        "no-use-before-define": "off",
-        "import/no-import-module-exports": "off",
-        "react/no-array-index-key": "off",
-        "no-alert": "off",
-        "react/prop-types": "off",
-        "no-param-reassign": "off",
-        "prefer-destructuring": "off",
-        "no-plusplus": "off",
-        "no-restricted-syntax": "off",
-        "no-underscore-dangle": "off",
-        "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
+        "import/no-named-as-default-member": "off",
         "unused-imports/no-unused-imports": "error",
         "unused-imports/no-unused-vars": [
             "warn",
             { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
 
         ],
+        "no-unneeded-ternary": 2,
+        "react/jsx-no-leaked-render": 2, // check and fix if there is && in render which makes the render leak
+
+
         // Try to make them ON as soon as possible by fixing the code
+        "react/prop-types": "off",
         "import/no-unresolved": "off",
         "no-nested-ternary": "off",
         "import/default": "off",
@@ -104,6 +85,11 @@ module.exports = {
         "react/no-unstable-nested-components": "off",
         "consistent-return": "off",
         "array-callback-return": "off",
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "camelcase": "off",
+
+        // More Rules for future
         // 'react/jsx-indent': ['error', 4, {
         //   checkAttributes: true,
         //   indentLogicalExpressions: true,
@@ -112,8 +98,40 @@ module.exports = {
         //   indentMode: 4,
         //   ignoreTernaryOperator: true,
         // }],
-
+        // "global-require": "off",
+        // "import/order": "off",
+        // "class-methods-use-this": "off",
+        // "no-return-await": "off",
+        // "no-console": "off",
+        // "react/destructuring-assignment": "off",
+        // "react/jsx-filename-extension": "off",
+        // "import/prefer-default-export": "off",
+        // "import/no-cycle": "off",
+        // "no-shadow": "off",
+        // "react/jsx-props-no-spreading": "off",
+        // "no-use-before-define": "off",
+        // "import/no-import-module-exports": "off",
+        // "react/no-array-index-key": "off",
+        // "no-alert": "off",
+        // "no-param-reassign": "off",
+        // "prefer-destructuring": "off",
+        // "no-plusplus": "off",
+        // "no-restricted-syntax": "off",
+        // "no-underscore-dangle": "off",
+        // "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
     },
+    "settings": {
+        "react": {
+            "createClass": "createReactClass", // Regex for Component Factory to use,
+                                               // default to "createReactClass"
+            "pragma": "React",  // Pragma to use, default to "React"
+            "fragment": "Fragment",  // Fragment to use (may be a property of <pragma>), default to "Fragment"
+            "version": "detect", // React version. "detect" automatically picks the version you have installed.
+                                 // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
+                                 // It will default to "latest" and warn if missing, and to "detect" in the future
+            "flowVersion": "0.53" // Flow version
+        },
+    }
 };
 
 /*
@@ -122,7 +140,7 @@ module.exports = {
 * "devDependencies": {
         "@babel/eslint-parser": "^7.19.1",
         "eslint": "^8.30.0",
-        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-standard": "^19.0.4",
         "eslint-config-prettier": "^8.5.0",
         "eslint-config-standard": "^17.0.0",
         "eslint-plugin-communist-spelling": "^1.0.0",
