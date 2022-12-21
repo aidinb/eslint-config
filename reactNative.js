@@ -13,6 +13,8 @@ module.exports = {
         'plugin:react/jsx-runtime',
         'plugin:import/recommended',
         'plugin:react-hooks/recommended',
+        './index.js',
+
     ],
     overrides: [
     ],
@@ -71,8 +73,18 @@ module.exports = {
             { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
 
         ],
+        'react/jsx-indent': ['error', 4, {
+            checkAttributes: true,
+            indentLogicalExpressions: true,
+        }],
+        'react/jsx-indent-props': ['error', {
+            indentMode: 4,
+            ignoreTernaryOperator: true,
+        }],
         "no-unneeded-ternary": 2,
         "react/jsx-no-leaked-render": 2, // check and fix if there is && in render which makes the render leak
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
 
 
         // Try to make them ON as soon as possible by fixing the code
@@ -85,19 +97,10 @@ module.exports = {
         "react/no-unstable-nested-components": "off",
         "consistent-return": "off",
         "array-callback-return": "off",
-        "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error",
         "camelcase": "off",
 
         // More Rules for future
-        // 'react/jsx-indent': ['error', 4, {
-        //   checkAttributes: true,
-        //   indentLogicalExpressions: true,
-        // }],
-        // 'react/jsx-indent-props': ['error', {
-        //   indentMode: 4,
-        //   ignoreTernaryOperator: true,
-        // }],
+
         // "global-require": "off",
         // "import/order": "off",
         // "class-methods-use-this": "off",
