@@ -41,6 +41,7 @@ module.exports = {
             { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
 
         ],
+        "@typescript-eslint/naming-convention": "off",
 
 
         // Try to make them ON as soon as possible by fixing the code
