@@ -68,7 +68,7 @@ Add the following to `.eslintrc.js`:
 
 ### Install
 ```
-npm install --save-dev @babel/eslint-parser eslint eslint-config-standard eslint-config-prettier eslint-plugin-communist-spelling eslint-plugin-decorator-position eslint-plugin-eqeqeq-fix eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-mobx eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-native eslint-plugin-unused-imports eslint-plugin-n
+npm install --save-dev @babel/eslint-parser eslint eslint-config-standard eslint-config-prettier eslint-plugin-communist-spelling eslint-plugin-decorator-position eslint-plugin-eqeqeq-fix eslint-plugin-import eslint-plugin-mobx eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-native eslint-plugin-unused-imports eslint-plugin-n
 ```
 
 ### Usage

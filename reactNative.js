@@ -5,13 +5,10 @@ module.exports = {
         "react-native/react-native": true
     },
     extends: [
-        "plugin:react/recommended",
         "plugin:eqeqeq-fix/recommended",
         "plugin:import/errors",
         "plugin:import/warnings",
         'plugin:react/jsx-runtime',
-        'plugin:import/recommended',
-        'plugin:react-hooks/recommended',
         "prettier",
         './react.js',
     ],
@@ -27,9 +24,6 @@ module.exports = {
         },
     },
     plugins: [
-        'decorator-position',
-        'mobx',
-        "react",
         "react-native",
         "unused-imports",
     ],
