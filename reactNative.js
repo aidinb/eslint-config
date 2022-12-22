@@ -34,7 +34,6 @@ module.exports = {
         "react/jsx-no-leaked-render": 'error', // check and fix if there is && in render which makes the render leak
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
-        '@typescript-eslint/await-thenable': 'off',
         "unused-imports/no-unused-imports": "error",
         "unused-imports/no-unused-vars": [
             "warn",
