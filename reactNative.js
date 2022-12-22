@@ -9,7 +9,6 @@ module.exports = {
         "plugin:import/errors",
         "plugin:import/warnings",
         'plugin:react/jsx-runtime',
-        "prettier",
         './react.js',
     ],
     overrides: [
@@ -31,6 +30,7 @@ module.exports = {
     rules: {
         "import/named": "off",
         "import/namespace": "off",
+        "import/no-named-as-default": "off",
         "import/no-named-as-default-member": "off",
         "no-unneeded-ternary": 'error',
         "react/jsx-no-leaked-render": 'error', // check and fix if there is && in render which makes the render leak
