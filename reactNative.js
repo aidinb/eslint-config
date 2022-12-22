@@ -2,17 +2,18 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        react-native/react-native: true
     },
     extends: [
         "plugin:react/recommended",
-        './index.js',
-        "prettier",
         "plugin:eqeqeq-fix/recommended",
         "plugin:import/errors",
         "plugin:import/warnings",
         'plugin:react/jsx-runtime',
         'plugin:import/recommended',
         'plugin:react-hooks/recommended',
+        "prettier",
+        './react.js',
     ],
     overrides: [
     ],
@@ -26,75 +27,37 @@ module.exports = {
         },
     },
     plugins: [
+        'decorator-position',
+        'mobx',
         "react",
         "react-native",
         "unused-imports",
-        'decorator-position',
-        'mobx',
     ],
     rules: {
-        'decorator-position/decorator-position': ['error', {
-            properties: 'above',
-            methods: 'above',
-        }],
-        'mobx/missing-make-observable': 'error',
-        'react/jsx-child-element-spacing': 'error',
-        'react/jsx-curly-brace-presence': ['error', 'never'],
-        'react/jsx-curly-newline': ['error', {
-            multiline: 'consistent',
-            singleline: 'consistent'
-        }],
-        'react/jsx-curly-spacing': ['error', {
-            when: 'never',
-            children: true,
-        }],
-        'react/jsx-equals-spacing': ['error', 'never'],
-        'react/jsx-max-props-per-line': ['error', {
-            maximum: 2,
-            when: 'multiline',
-        }],
-        'react/jsx-pascal-case': 'error',
-        'react/jsx-props-no-multi-spaces': 'error',
-        'react/jsx-tag-spacing': ['error', {
-            closingSlash: 'never',
-            beforeSelfClosing: 'always',
-            afterOpening: 'never',
-            beforeClosing: 'never',
-        }],
-        'react/self-closing-comp': 'error',
         "import/named": "off",
         "import/no-named-as-default-member": "off",
+        "no-unneeded-ternary": 'error',
+        "react/jsx-no-leaked-render": 'error', // check and fix if there is && in render which makes the render leak
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
         "unused-imports/no-unused-imports": "error",
         "unused-imports/no-unused-vars": [
             "warn",
             { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
 
         ],
-        // 'react/jsx-indent': ['error', 4, {
-        //     checkAttributes: true,
-        //     indentLogicalExpressions: true,
-        // }],
-        'react/jsx-indent-props': ['error', {
-            indentMode: 4,
-            ignoreTernaryOperator: true,
-        }],
-        "no-unneeded-ternary": 2,
-        "react/jsx-no-leaked-render": 2, // check and fix if there is && in render which makes the render leak
-        "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error",
 
 
         // Try to make them ON as soon as possible by fixing the code
-        "react/prop-types": "off",
-        "import/no-unresolved": "off",
-        "no-nested-ternary": "off",
-        "import/default": "off",
-        "react-hooks/exhaustive-deps": "off",
-        "no-await-in-loop": "off",
-        "react/no-unstable-nested-components": "off",
-        "consistent-return": "off",
         "array-callback-return": "off",
         "camelcase": "off",
+        "consistent-return": "off",
+        "import/no-unresolved": "off",
+        "import/default": "off",
+        "no-nested-ternary": "off",
+        "no-await-in-loop": "off",
+        "react-hooks/exhaustive-deps": "off",
+        "react/no-unstable-nested-components": "off",
 
         // More Rules for future
 
@@ -120,17 +83,5 @@ module.exports = {
         // "no-underscore-dangle": "off",
         // "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
     },
-    "settings": {
-        "react": {
-            "createClass": "createReactClass", // Regex for Component Factory to use,
-                                               // default to "createReactClass"
-            "pragma": "React",  // Pragma to use, default to "React"
-            "fragment": "Fragment",  // Fragment to use (may be a property of <pragma>), default to "Fragment"
-            "version": "detect", // React version. "detect" automatically picks the version you have installed.
-                                 // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
-                                 // It will default to "latest" and warn if missing, and to "detect" in the future
-            "flowVersion": "0.53" // Flow version
-        },
-    }
-};
+}
 
