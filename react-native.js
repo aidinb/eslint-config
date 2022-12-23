@@ -13,7 +13,6 @@ module.exports = {
     ],
     overrides: [
     ],
-    parser: "@typescript-eslint/parser",
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -43,19 +42,7 @@ module.exports = {
             { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
 
         ],
-        "@typescript-eslint/naming-convention": "off",
-
-
-        // Try to make them ON as soon as possible by fixing the code
-        "array-callback-return": "off",
-        "camelcase": "off",
-        "consistent-return": "off",
-        "import/no-unresolved": "off",
-        "import/default": "off",
-        "no-nested-ternary": "off",
-        "no-await-in-loop": "off",
-        "react-hooks/exhaustive-deps": "off",
-        "react/no-unstable-nested-components": "off",
+        
 
         // More Rules for future
 
