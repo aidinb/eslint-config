@@ -6,22 +6,8 @@ module.exports = {
     },
     extends: [
         "plugin:eqeqeq-fix/recommended",
-        "plugin:import/errors",
-        "plugin:import/warnings",
-        'plugin:react/jsx-runtime',
         './react.js',
     ],
-    overrides: [
-    ],
-    parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-            legacyDecorators: true,
-            experimentalDecorators: true,
-            jsx: true,
-        },
-    },
     plugins: [
         "react-native",
         "unused-imports",
@@ -42,7 +28,7 @@ module.exports = {
             { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
 
         ],
-        
+
 
         // More Rules for future
 
