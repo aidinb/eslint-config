@@ -5,29 +5,25 @@ module.exports = {
         "react-native/react-native": true
     },
     extends: [
-        "plugin:eqeqeq-fix/recommended",
         './react.js',
+        "plugin:react-native/all"
     ],
     plugins: [
         "react-native",
         "unused-imports",
     ],
     rules: {
-        "import/named": "off",
-        "import/namespace": "off",
-        "import/no-named-as-default": "off",
-        "import/no-named-as-default-member": "off",
         "no-unneeded-ternary": 'error',
         "react/jsx-no-leaked-render": 'error', // check and fix if there is && in render which makes the render leak
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
         "unused-imports/no-unused-imports": "error",
-        "unicorn/prefer-logical-operator-over-ternary": "off",
         "unused-imports/no-unused-vars": [
-            "warn",
+            "error",
             { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
 
         ],
+
 
 
         // More Rules for future
