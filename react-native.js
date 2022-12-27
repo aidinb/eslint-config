@@ -17,6 +17,7 @@ module.exports = {
         "react/jsx-no-leaked-render": 'error', // check and fix if there is && in render which makes the render leak
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
+        "@typescript-eslint/no-unused-vars": "error",
         "unused-imports/no-unused-imports": "error",
         "unused-imports/no-unused-vars": [
             "error",
@@ -33,7 +34,6 @@ module.exports = {
         // "no-return-await": "off",
         // "no-console": "off",
         // "react/destructuring-assignment": "off",
-        // "react/jsx-filename-extension": "off",
         // "import/prefer-default-export": "off",
         // "import/no-cycle": "off",
         // "no-shadow": "off",
@@ -45,7 +45,6 @@ module.exports = {
         // "no-param-reassign": "off",
         // "prefer-destructuring": "off",
         // "no-plusplus": "off",
-        // "no-restricted-syntax": "off",
         // "no-underscore-dangle": "off",
         // "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
     },
