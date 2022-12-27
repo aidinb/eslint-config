@@ -62,3 +62,20 @@ Add the following to `.eslintrc.js`:
     "extends": ["woshapp/react"]
 }
 ```
+
+
+## React Native rules
+
+### Install
+```
+npm install --save-dev typescript eslint-plugin-import eslint-plugin-unicorn @typescript-eslint/eslint-plugin eslint-config-woshapp @typescript-eslint/parser eslint eslint-plugin-communist-spelling eslint-plugin-decorator-position eslint-plugin-mobx eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-native eslint-plugin-unused-imports eslint-plugin-n
+```
+
+### Usage
+Add the following to `.eslintrc.js`:
+
+```javascript
+{
+    "extends": ["woshapp/react-native"]
+}
+```
