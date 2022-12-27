@@ -28,7 +28,6 @@ module.exports = {
 
         // More Rules for future
 
-        // "global-require": "off",
         // "import/order": "off",
         // "class-methods-use-this": "off",
         // "no-return-await": "off",
